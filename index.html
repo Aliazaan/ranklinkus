@@ -105,3 +105,130 @@
   <script src="script.js"></script>
 </body>
 </html>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+header {
+  background: linear-gradient(to right, #004aad, #007bff);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.btn {
+  background: white;
+  color: #004aad;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #003b8a;
+  color: white;
+}
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.section h2 {
+  color: #004aad;
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fafafa;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.member img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.member h3 {
+  margin-top: 10px;
+  color: #004aad;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact input, .contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.contact button {
+  background: #004aad;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.contact button:hover {
+  background: #003b8a;
+}
+footer {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+</style>
