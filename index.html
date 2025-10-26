@@ -1,212 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RankLinkus - Expert Link Building, Blogger Outreach, and SEO growth services for businesses aiming to rank higher.">
-  <title>RankLinkus | Link Building & Outreach Experts</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RankLinkus — Link Building, Outreach, Off Page SEO</title>
+  <meta name="description" content="RankLinkus provides ethical link building, targeted outreach, and content promotion to grow your organic authority and traffic." />
+  <link rel="canonical" href="https://ranklinkus.com/" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
-    body { background: #fff; color: #222; scroll-behavior: smooth; }
-
-    header {
-      position: sticky; top: 0; background: #0a0a23; color: white; z-index: 1000;
-      display: flex; justify-content: space-between; align-items: center; padding: 15px 40px;
+    /* ---------- Basic reset and type ---------- */
+    :root{
+      --brand:#0d47a1; /* deep blue */
+      --accent:#00a8ff;
+      --muted:#5b6670;
+      --bg:#ffffff;
+      --card:#fbfdff;
+      --radius:12px;
+      --container:1200px;
     }
-    header h1 { font-size: 24px; color: #00bfff; letter-spacing: 1px; }
-    nav a {
-      margin-left: 20px; color: white; text-decoration: none; font-weight: 500; transition: 0.3s;
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0b0b0b;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto;display:block}
+
+    /* ---------- container ---------- */
+    .container{max-width:var(--container);margin:0 auto;padding:0 18px}
+
+    /* ---------- header / nav ---------- */
+    header{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(6px);z-index:999;border-bottom:1px solid #eef2f6}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;color:var(--brand);font-size:1.1rem;letter-spacing:0.3px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
+    nav a{font-weight:700;color:#111;font-size:0.95rem}
+    .cta-btn{background:var(--brand);color:#fff;padding:9px 14px;border-radius:8px;font-weight:700;border:0;cursor:pointer}
+
+    /* ---------- hero ---------- */
+    .hero{
+      display:flex;gap:28px;align-items:center;justify-content:center;padding:56px 0 42px;
+      background-image:url('https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=1600&q=70');
+      background-position:center;background-size:cover;
     }
-    nav a:hover { color: #00bfff; }
+    .hero-overlay{background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.92));padding:32px;border-radius:16px;max-width:1100px;margin:auto;box-shadow:0 8px 30px rgba(6,10,20,0.06)}
+    .hero-grid{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center}
+    .hero-title{font-size:2rem;font-weight:800;color:#0b0b0b;margin-bottom:12px}
+    .hero-lead{color:var(--muted);font-size:1.05rem;line-height:1.6;margin-bottom:18px}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+    .panel{background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef3f8}
 
-    .hero {
-      background: url('https://www.officelovin.com/wp-content/uploads/2021/12/outreach-london-office-1.jpg') no-repeat center/cover;
-      height: 90vh; display: flex; align-items: center; justify-content: center;
-      flex-direction: column; color: white; text-align: center; padding: 0 20px;
+    /* ---------- sections general ---------- */
+    section{padding:56px 0}
+    h2.section-title{font-size:1.6rem;color:var(--brand);margin-bottom:8px;font-weight:800}
+    p.lead{color:var(--muted);max-width:900px;margin:0 auto 22px;font-size:1rem;line-height:1.7}
+
+    .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+
+    .card{background:#fff;padding:20px;border-radius:10px;border:1px solid #eef3f8;box-shadow:0 6px 18px rgba(12,18,24,0.04)}
+    .card h3{font-size:1.05rem;margin:0 0 8px;font-weight:800;color:#0b0b0b}
+    .card p{margin:0;color:var(--muted);line-height:1.6}
+
+    /* ---------- why seo ---------- */
+    .why-list{display:flex;flex-direction:column;gap:12px;max-width:980px;margin:16px auto 0}
+    .why-item{display:flex;gap:14px;align-items:flex-start}
+    .why-item .num{width:44px;height:44px;border-radius:999px;background:var(--brand);color:white;display:flex;align-items:center;justify-content:center;font-weight:800}
+    .why-item .content h4{margin:0;font-weight:800}
+    .why-item .content p{margin:6px 0 0;color:var(--muted)}
+
+    /* ---------- process ---------- */
+    .process{max-width:1100px;margin:0 auto}
+    .process-step{display:flex;gap:14px;align-items:flex-start}
+    .step-num{font-weight:900;color:var(--brand);font-size:1.05rem;min-width:46px}
+
+    /* ---------- blog teaser ---------- */
+    .blog-card{display:flex;gap:14px;align-items:flex-start}
+    .blog-card img{width:160px;height:100px;object-fit:cover;border-radius:8px}
+    .blog-meta{font-size:0.9rem;color:var(--muted)}
+
+    /* ---------- testimonials ---------- */
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .testimonials blockquote{margin:0;padding:18px;background:#fff;border-radius:10px;border:1px solid #eef3f8;color:#0b0b0b;font-weight:700}
+
+    /* ---------- contact ---------- */
+    .contact-wrap{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+    .contact-form{background:#fff;padding:18px;border-radius:12px;border:1px solid #eef3f8}
+    .contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #dfe7ee;margin-bottom:10px;font-size:0.98rem;color:#0b0b0b}
+    .contact-form button{background:var(--brand);color:white;padding:12px 14px;border-radius:8px;border:0;font-weight:800;cursor:pointer}
+    .contact-aside{background:#f7fbff;padding:16px;border-radius:12px;border:1px solid #e6f2ff;color:var(--muted)}
+
+    /* ---------- footer ---------- */
+    footer{padding:30px 0;border-top:1px solid #eef3f8;background:#ffffff}
+    .footer-inner{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+
+    /* ---------- responsive ---------- */
+    @media (max-width:1000px){
+      .hero-grid{grid-template-columns:1fr}
+      .contact-wrap{grid-template-columns:1fr}
+      nav ul{display:none}
     }
-    .hero h2 { font-size: 48px; margin-bottom: 20px; }
-    .hero p { max-width: 600px; font-size: 18px; line-height: 1.5; }
-    .btn {
-      margin-top: 25px; background: #00bfff; color: white; padding: 12px 25px;
-      border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: 0.3s;
-    }
-    .btn:hover { background: #008ecc; }
-
-    section { padding: 70px 20px; max-width: 1200px; margin: auto; }
-
-    .about, .services, .why, .process, .blog, .testimonials, .contact { text-align: center; }
-    h2.section-title { font-size: 32px; color: #0a0a23; margin-bottom: 20px; }
-    p.section-subtitle { color: #666; max-width: 700px; margin: 0 auto 40px; }
-
-    .services-grid, .process-grid, .blog-grid, .testimonials-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;
-    }
-
-    .card {
-      background: #f9f9f9; padding: 25px; border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: 0.3s;
-    }
-    .card:hover { transform: translateY(-5px); }
-
-    .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
-
-    /* Contact Section */
-    form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: auto; }
-    input, textarea {
-      padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px;
-    }
-    button[type="submit"] {
-      background: #00bfff; color: white; padding: 12px; border: none;
-      border-radius: 5px; cursor: pointer; transition: 0.3s;
-    }
-    button[type="submit"]:hover { background: #008ecc; }
-
-    footer {
-      background: #0a0a23; color: white; text-align: center; padding: 40px 20px;
-    }
-    footer a { color: #00bfff; text-decoration: none; margin: 0 10px; }
-    footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; padding: 20px; }
-      .hero h2 { font-size: 32px; }
+    @media (max-width:520px){
+      .hero{padding:36px 0}
+      .hero-title{font-size:1.4rem}
+      .brand{font-size:1rem}
+      .grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>RankLinkus</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#why">Why SEO</a>
-    <a href="#process">Process</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Boost Your Website Authority With RankLinkus</h2>
-  <p>We specialize in link building, blogger outreach, and off-page SEO to help your business rank higher, grow faster, and build long-term authority online.</p>
-  <a href="#contact"><button class="btn">Get Started</button></a>
-</section>
-
-<section id="about" class="about">
-  <h2 class="section-title">About RankLinkus</h2>
-  <p class="section-subtitle">RankLinkus is a digital outreach agency built to elevate your brand through powerful backlinks and authentic connections. We help you gain visibility, trust, and authority — everything search engines love.</p>
-  <p style="margin-top:20px;">Our team of experienced SEO specialists and content marketers connect you with high-quality publishers, niche websites, and bloggers that amplify your reach. Whether you’re a startup or an enterprise, we ensure your brand earns the online reputation it deserves.</p>
-</section>
-
-<section id="services" class="services">
-  <h2 class="section-title">Our Services</h2>
-  <p class="section-subtitle">We provide full-scale link-building solutions to improve rankings and authority.</p>
-  <div class="services-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092580414-7f3ddba5c1b1?auto=format&fit=crop&w=600&q=60" alt="Link Building">
-      <h3>Manual Link Building</h3>
-      <p>We secure contextual, do-follow backlinks from relevant sites to strengthen your domain authority safely and effectively.</p>
+  <!-- header, same across pages -->
+  <header>
+    <div class="container nav">
+      <div class="brand">RankLinkus</div>
+      <nav>
+        <ul>
+          <li style="display:inline"><a href="index.html">Home</a></li>
+          <li style="display:inline"><a href="index.html#services">Services</a></li>
+          <li style="display:inline"><a href="index.html#why">Why SEO</a></li>
+          <li style="display:inline"><a href="index.html#process">Process</a></li>
+          <li style="display:inline"><a href="index.html#blog">Blog</a></li>
+          <li style="display:inline"><a href="#contact" class="cta-btn">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=60" alt="Blogger Outreach">
-      <h3>Blogger Outreach</h3>
-      <p>Get featured on high-traffic blogs through personalized outreach campaigns crafted for your niche audience.</p>
+  </header>
+
+  <!-- hero, with readable card over image, black bold text -->
+  <section class="hero" aria-label="hero">
+    <div class="hero-overlay container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-title">Build Real Authority, Earn Lasting Traffic</div>
+          <div class="hero-lead" style="font-weight:700;color:#0b0b0b">
+            RankLinkus offers professional link building and outreach services, focused on editorial placements, niche relevance, and transparent reporting. We write, pitch, and secure links that help search engines and people trust your brand.
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#contact"><button class="btn">Request Proposal</button></a>
+            <a href="#services"><button class="btn" style="background:#e6f2ff;color:var(--brand);border:1px solid #d0e8ff">See Services</button></a>
+          </div>
+        </div>
+
+        <aside class="panel" style="min-width:260px">
+          <div style="font-weight:800;color:#0b0b0b;margin-bottom:8px">Start with a free audit</div>
+          <div style="color:var(--muted)">We review your link profile, identify opportunities, and propose a prioritized plan, including target sites and expected outcomes.</div>
+          <div style="margin-top:12px"><a href="#contact" class="" style="font-weight:800">Get your audit</a></div>
+        </aside>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=60" alt="SEO Audit">
-      <h3>SEO Strategy</h3>
-      <p>We analyze your site structure, keywords, and link profile to create a roadmap for sustainable growth and higher rankings.</p>
+  </section>
+
+  <!-- about -->
+  <section id="about" class="container about">
+    <h2 class="section-title">About RankLinkus</h2>
+    <p class="lead">We are a specialist outreach and link building service, delivering curated editorial links, long term partnership opportunities, and data led outreach, for brands that want durable search growth, not short term gains.</p>
+
+    <div style="margin-top:20px" class="grid">
+      <div class="card">
+        <h3>Ethical, Manual Outreach</h3>
+        <p>All campaigns are run manually, with personalized pitches and human follow up, so placements last and offer real editorial value.</p>
+      </div>
+      <div class="card">
+        <h3>Topical Relevance</h3>
+        <p>We target websites that match your niche and audience, increasing the chance of clicks, referral traffic, and sustained SEO benefit.</p>
+      </div>
+      <div class="card">
+        <h3>Transparent Reporting</h3>
+        <p>Every link is reported with live URL, context, and domain metrics, so you can see exactly how your profile improves over time.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="why" class="why">
-  <h2 class="section-title">Why SEO & Link Building Are Important</h2>
-  <p class="section-subtitle">A strong link profile tells Google that your website is trusted, relevant, and worth ranking.</p>
-  <p>Without quality backlinks, even great content can remain invisible. Link building is the backbone of SEO — it drives authority, improves organic traffic, and creates long-term digital credibility. RankLinkus focuses on natural link acquisition that aligns with Google’s E-E-A-T principles: Experience, Expertise, Authoritativeness, and Trustworthiness.</p>
-</section>
+  <!-- services -->
+  <section id="services" class="container services">
+    <h2 class="section-title">Services We Offer</h2>
+    <p class="lead">Practical services that map to measurable SEO outcomes.</p>
 
-<section id="process" class="process">
-  <h2 class="section-title">Our Outreach Process</h2>
-  <div class="process-grid">
-    <div class="card"><h3>1. Research</h3><p>We identify top-tier websites and blogs that perfectly fit your niche and target audience.</p></div>
-    <div class="card"><h3>2. Outreach</h3><p>Personalized pitches are sent to publishers, ensuring your brand gets featured in the right places.</p></div>
-    <div class="card"><h3>3. Content Creation</h3><p>Our content specialists craft engaging articles with your links placed naturally within context.</p></div>
-    <div class="card"><h3>4. Reporting</h3><p>We deliver transparent reports with live URLs, domain metrics, and publication details.</p></div>
-  </div>
-</section>
+    <div class="grid" style="margin-top:18px">
+      <div class="card">
+        <h3>Guest Post & Editorial Placements</h3>
+        <p>We create editorial content that fits publisher guidelines, then secure placements with natural contextual links. Content is unique, researched, and optimized to deliver referral traffic and authority.</p>
+      </div>
 
-<section id="blog" class="blog">
-  <h2 class="section-title">From Our Blog</h2>
-  <div class="blog-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1504691342899-9c46edb2d52f?auto=format&fit=crop&w=600&q=60" alt="Blog Post 1">
-      <h3>The Power of Quality Backlinks</h3>
-      <p>Discover why one high-quality backlink can be more powerful than hundreds of low-quality links, and how to earn them organically.</p>
-      <a href="#">Read More →</a>
+      <div class="card">
+        <h3>Blogger Outreach & Partnerships</h3>
+        <p>We approach bloggers and niche publications with tailored proposals, collaborations, and data-led story ideas that are interesting to their readers, building genuine relationships for recurring opportunities.</p>
+      </div>
+
+      <div class="card">
+        <h3>Resource Link Building & Broken Link Replacement</h3>
+        <p>We identify relevant resource pages and broken links, offering your content as a superior replacement, a proven method for earning contextual links.</p>
+      </div>
+
+      <div class="card">
+        <h3>Link Audits & Strategy</h3>
+        <p>Complete analysis of your current link profile and competitors, then a prioritized outreach plan with target sites, expected timelines, and risk mitigation steps.</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=60" alt="Blog Post 2">
-      <h3>Top Outreach Tactics That Actually Work</h3>
-      <p>Learn about real outreach methods used by SEO experts to secure valuable links and relationships with bloggers.</p>
-      <a href="#">Read More →</a>
+  </section>
+
+  <!-- why seo -->
+  <section id="why" class="container why">
+    <h2 class="section-title">Why SEO & Link Building Matter</h2>
+    <p class="lead">Search engines use links as a signal of credibility, and users click links when they find relevant, trusted content. Strong links improve rankings, increase organic clicks, and create brand recognition.</p>
+
+    <div class="why-list" aria-hidden="false">
+      <div class="why-item">
+        <div class="num" style="background:#0d47a1;color:white;font-weight:900">1</div>
+        <div class="content">
+          <h4 style="font-weight:800">Authority</h4>
+          <p>Backlinks from relevant sites tell search engines your content is worth referencing, which raises your domain and page authority over time.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="num" style="background:#0066c0;color:white;font-weight:900">2</div>
+        <div class="content">
+          <h4 style="font-weight:800">Referral Traffic</h4>
+          <p>Editorial links bring engaged visitors who are more likely to convert, not just bots, improving the quality of your traffic mix.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="num" style="background:#009bd6;color:white;font-weight:900">3</div>
+        <div class="content">
+          <h4 style="font-weight:800">Sustainable Growth</h4>
+          <p>High quality placements have long shelf life, continuing to pass value as long as the content and host site remain active.</p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=60" alt="Blog Post 3">
-      <h3>SEO in 2025: What Matters Most</h3>
-      <p>Understand how Google’s algorithms are shifting and why relevance, authority, and UX matter more than ever before.</p>
-      <a href="#">Read More →</a>
+  </section>
+
+  <!-- process -->
+  <section id="process" class="container process">
+    <h2 class="section-title">Our Outreach Process, Step by Step</h2>
+    <div style="margin-top:18px;display:flex;flex-direction:column;gap:14px">
+      <div class="process-step card">
+        <div class="step-num">1</div>
+        <div>
+          <h4 style="margin:0;font-weight:800">Discovery & Audit</h4>
+          <p style="margin-top:6px;color:var(--muted)">We audit your site and competitors, map your topical opportunities, and define target metrics and domains.</p>
+        </div>
+      </div>
+
+      <div class="process-step card">
+        <div class="step-num">2</div>
+        <div>
+          <h4 style="margin:0;font-weight:800">Content & Pitch</h4>
+          <p style="margin-top:6px;color:var(--muted)">We prepare content briefs, draft outreach templates, and personalize pitches for each prospect.</p>
+        </div>
+      </div>
+
+      <div class="process-step card">
+        <div class="step-num">3</div>
+        <div>
+          <h4 style="margin:0;font-weight:800">Placement & Quality Control</h4>
+          <p style="margin-top:6px;color:var(--muted)">We negotiate placement terms, review the final article, and ensure the link is editorial, contextual, and visible.</p>
+        </div>
+      </div>
+
+      <div class="process-step card">
+        <div class="step-num">4</div>
+        <div>
+          <h4 style="margin:0;font-weight:800">Delivery & Reporting</h4>
+          <p style="margin-top:6px;color:var(--muted)">You receive a campaign report with live URLs, screenshots, and domain metrics, plus recommendations for next steps.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="testimonials" class="testimonials">
-  <h2 class="section-title">What Clients Say</h2>
-  <div class="testimonials-grid">
-    <div class="card"><p>“RankLinkus transformed our SEO strategy. Within months, our traffic doubled and domain authority jumped by 15 points.”</p><strong>- Growthly Agency</strong></div>
-    <div class="card"><p>“Professional, transparent, and effective link-building service. The reports were detailed and results exceeded expectations.”</p><strong>- DevCorner Media</strong></div>
-  </div>
-</section>
+  <!-- blog teasers -->
+  <section id="blog" class="container blog">
+    <h2 class="section-title">Insights from Our Blog</h2>
+    <p class="lead">Practical guides and original research to help you understand modern outreach and link building.</p>
 
-<section id="contact" class="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <p class="section-subtitle">Have questions or want to start your campaign? Send us a message below.</p>
+    <div class="grid" style="margin-top:18px">
+      <article class="card blog-card">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=60" alt="Why backlinks matter">
+        <div>
+          <div class="blog-meta">Nov 01, 2025 • By RankLinkus</div>
+          <h3 style="margin-top:6px;font-weight:900"><a href="blog-why-backlinks-matter.html">Why High Quality Backlinks Matter for SEO</a></h3>
+          <p style="margin-top:6px;color:var(--muted)">An original breakdown of link quality signals, placement importance, and how to prioritize targets for maximum impact.</p>
+        </div>
+      </article>
 
-  <form action="https://formspree.io/f/xzzkbler" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+      <article class="card blog-card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=60" alt="Outreach strategies">
+        <div>
+          <div class="blog-meta">Oct 25, 2025 • By RankLinkus</div>
+          <h3 style="margin-top:6px;font-weight:900"><a href="blog-top-outreach-strategies.html">Top Outreach Strategies That Actually Work</a></h3>
+          <p style="margin-top:6px;color:var(--muted)">Concrete outreach workflows, personalization tips, and follow up sequences you can use today.</p>
+        </div>
+      </article>
 
-  <p style="margin-top:20px;">Or reach us directly at <a href="mailto:outreach@ranklinkus.com">outreach@ranklinkus.com</a></p>
-</section>
+      <article class="card blog-card">
+        <img src="https://images.unsplash.com/photo-1505925456532-4b4f74f0b1ea?auto=format&fit=crop&w=800&q=60" alt="Guest posts">
+        <div>
+          <div class="blog-meta">Oct 18, 2025 • By RankLinkus</div>
+          <h3 style="margin-top:6px;font-weight:900"><a href="blog-guest-posts-authority.html">How Guest Posts Build Authority, Properly</a></h3>
+          <p style="margin-top:6px;color:var(--muted)">A practical guide to scalable guest posting, avoiding risk, and creating content that editors accept.</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2025 RankLinkus. All Rights Reserved.</p>
-  <div style="margin-top:10px;">
-    <a href="#">LinkedIn</a> | 
-    <a href="#">Facebook</a> | 
-    <a href="#">Twitter</a> | 
-    <a href="#">Telegram</a>
-  </div>
-</footer>
+  <!-- testimonials -->
+  <section class="container testimonials">
+    <h2 class="section-title">Client Feedback</h2>
+    <p class="lead">We focus on clear, measurable outcomes, so our client feedback is about results, process, and transparency.</p>
 
-<script>
-const form = document.querySelector("form");
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-  const res = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' }});
-  if (res.ok) {
-    alert("Thank you! Your message has been sent successfully.");
-    form.reset();
-  } else {
-    alert("Oops! Something went wrong. Please try again later.");
-  }
-});
-</script>
+    <div style="margin-top:18px" class="testimonials">
+      <blockquote class="card">RankLinkus helped us secure 12 strong editorial placements in three months, each driving relevant traffic, and our organic leads increased by 36 percent. — Marketing Lead, SaaS</blockquote>
+      <blockquote class="card">Fast, transparent, and diligent outreach, they gave us URLs, context, and follow up notes for each placement, which made reporting easy. — Head of Growth, eCommerce</blockquote>
+    </div>
+  </section>
 
+  <!-- contact -->
+  <section id="contact" class="container contact">
+    <h2 class="section-title">Contact RankLinkus</h2>
+    <p class="lead">To start, send a short note about your website, target market, and goals, and we will reply with a proposed plan and audit offer.</p>
+
+    <div class="contact-wrap" style="margin-top:18px">
+      <form class="contact-form" id="mainContact" action="https://formspree.io/f/xzzkbler" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="_replyto" placeholder="Your email" required />
+        <input type="text" name="website" placeholder="Website, optional" />
+        <textarea name="message" placeholder="Briefly tell us about your goals" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+        <div id="cf-msg" style="margin-top:10px;color:var(--muted);display:none"></div>
+      </form>
+
+      <aside class="contact-aside">
+        <strong style="display:block;margin-bottom:8px">Contact</strong>
+        <div style="color:#0b0b0b;font-weight:800">outreach@ranklinkus.com</div>
+        <div style="margin-top:12px;color:var(--muted)">We respond within 48 hours, usually sooner. Include your website and a short summary of your goals for a faster audit.</div>
+        <div style="margin-top:14px">
+          <strong style="display:block;margin-bottom:6px">Follow</strong>
+          <div style="display:flex;gap:10px">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div style="font-weight:700">© 2025 RankLinkus</div>
+      <div style="color:var(--muted)">Built with care, outreach@ranklinkus.com</div>
+    </div>
+  </footer>
+
+  <!-- JS: smooth scroll and form submit -->
+  <script>
+    // smooth internal links
+    document.querySelectorAll('a[href^="#"]').forEach(function(el){
+      el.addEventListener('click', function(e){
+        var target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+
+    // form submit, prevents redirect, shows message
+    (function(){
+      var form = document.getElementById('mainContact');
+      var msg = document.getElementById('cf-msg');
+      if(!form) return;
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        msg.style.display = 'block';
+        msg.style.color = '#0b0b0b';
+        msg.textContent = 'Sending...';
+        var data = new FormData(form);
+        try{
+          var res = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' }});
+          if(res.ok){
+            msg.style.color = 'green';
+            msg.textContent = 'Thanks, your message was sent. We will reply within 48 hours.';
+            form.reset();
+          } else {
+            var result = await res.json();
+            msg.style.color = 'crimson';
+            msg.textContent = (result && result.error) ? result.error : 'Could not send, please try again later.';
+          }
+        } catch(err){
+          msg.style.color = 'crimson';
+          msg.textContent = 'Network error, please try again later.';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
