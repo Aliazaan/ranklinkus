@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RankLinkus Case Studies — Real results from real brands. See how we've driven organic growth, link authority, and revenue for 900+ clients worldwide.">
+<meta name="keywords" content="SEO case studies, link building results, digital PR success stories, organic traffic growth">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ranklinkus.com/pages/case-studies.html">
+<title>Case Studies — RankLinkus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.case-studies-section { padding: 80px 64px 110px; background: var(--bg); }
+.case-studies-section .container { max-width: var(--container); margin: 0 auto; }
+.filter-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 48px; }
+.filter-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 9px 20px; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+.filter-btn:hover { border-color: rgba(108,99,255,0.4); color: var(--text); }
+.filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.case-card { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; overflow: hidden; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; cursor: pointer; }
+.case-card:hover { transform: translateY(-7px); border-color: rgba(108,99,255,0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.3); }
+.case-card.featured { grid-column: span 2; }
+.case-header { padding: 32px 32px 0; }
+.case-industry { display: inline-flex; align-items: center; gap: 7px; background: rgba(108,99,255,0.12); border: 1px solid rgba(108,99,255,0.25); color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; padding: 4px 12px; border-radius: 100px; margin-bottom: 18px; }
+.case-header h3 { font-family: var(--heading); font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; }
+.case-header p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.case-metrics { display: flex; gap: 0; margin: 24px 0 0; border-top: 1px solid var(--border); }
+.case-metric { flex: 1; padding: 22px 24px; text-align: center; border-right: 1px solid var(--border); }
+.case-metric:last-child { border-right: none; }
+.cm-val { font-family: var(--heading); font-size: 26px; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; display: block; line-height: 1; }
+.cm-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-top: 6px; }
+.case-footer { padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; background: var(--surface2); }
+.case-services { display: flex; gap: 6px; flex-wrap: wrap; }
+.case-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 9px; border-radius: 100px; background: var(--surface); color: var(--muted); border: 1px solid var(--border); }
+.case-arrow { font-size: 18px; color: var(--accent); transition: transform 0.2s; }
+.case-card:hover .case-arrow { transform: translate(3px,-3px); }
+
+/* Testimonials strip */
+.results-strip { padding: 70px 64px; background: var(--bg2); }
+.results-strip .container { max-width: var(--container); margin: 0 auto; }
+.results-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 48px; }
+.result-item { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; }
+.ri-num { font-family: var(--heading); font-size: 36px; font-weight: 800; background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; display:block; line-height:1; }
+.ri-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 8px; }
+
+@media (max-width:1024px) { .case-grid { grid-template-columns: 1fr 1fr; } .case-card.featured { grid-column: span 1; } .results-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width:768px) { .case-studies-section { padding: 70px 20px; } .results-strip { padding: 70px 20px; } .case-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><span class="logo-icon">⚡</span>Rank<span class="accent">Linkus</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html">Services ▾</a>
+      <div class="dropdown">
+        <a href="services/link-building.html"><span class="di">🔗</span> Link Building</a>
+        <a href="services/digital-pr.html"><span class="di">📣</span> Digital PR</a>
+        <a href="services/seo.html"><span class="di">🔍</span> SEO</a>
+        <a href="services/content-writing.html"><span class="di">✍️</span> Content Writing</a>
+        <a href="services/design-video.html"><span class="di">🎬</span> Design &amp; Video</a>
+      </div>
+    </li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="case-studies.html" class="active">Case Studies</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav">
+  <a href="../index.html">🏠 Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="mobile-cta">Let's Talk →</a>
+</nav>
+
+<main>
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="badge">1,200+ Campaigns · Real Results</div>
+    <h1>Proof Is in the<br><em>Numbers</em></h1>
+    <p style="margin-top:20px">No cherry-picked stats. No exaggerated claims. Just documented results from real campaigns across real industries.</p>
+  </div>
+</div>
+
+<!-- Aggregate results -->
+<section class="results-strip">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:16px">
+      <div class="section-label" style="justify-content:center">Aggregate Results</div>
+      <h2 class="section-title">Numbers Across All Campaigns</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-item reveal"><span class="ri-num" data-target="80" data-suffix="%+">80%+</span><div class="ri-label">Average traffic increase</div></div>
+      <div class="result-item reveal reveal-delay-1"><span class="ri-num" data-target="18">18</span><div class="ri-label">Average DA point gain</div></div>
+      <div class="result-item reveal reveal-delay-2"><span class="ri-num" data-target="5">5mo</span><div class="ri-label">Avg. time to page 1</div></div>
+      <div class="result-item reveal reveal-delay-3"><span class="ri-num" data-target="6">6x</span><div class="ri-label">Average ROI on retainer</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Case Studies Grid -->
+<section class="case-studies-section">
+  <div class="container">
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Industries</button>
+      <button class="filter-btn" data-filter="saas">SaaS</button>
+      <button class="filter-btn" data-filter="ecom">E-Commerce</button>
+      <button class="filter-btn" data-filter="finance">Finance</button>
+      <button class="filter-btn" data-filter="legal">Legal</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+    </div>
+
+    <div class="case-grid">
+      <!-- Featured: TechFlow SaaS -->
+      <div class="case-card featured reveal" data-category="saas">
+        <div class="case-header">
+          <div class="case-industry">⚙️ SaaS</div>
+          <h3>TechFlow SaaS: Page 3 to #1 Position in 5 Months</h3>
+          <p>TechFlow came to us ranking on page 3 for their primary keyword with a domain rating of 24. Through targeted DR70+ link building and a full content strategy overhaul, we took them to position 1 — generating a 312% increase in organic leads.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="cm-val">#1</span><div class="cm-label">SERP Position</div></div>
+          <div class="case-metric"><span class="cm-val">312%</span><div class="cm-label">Lead Increase</div></div>
+          <div class="case-metric"><span class="cm-val">+34 DR</span><div class="cm-label">DA Growth</div></div>
+          <div class="case-metric"><span class="cm-val">5mo</span><div class="cm-label">Time to #1</div></div>
+        </div>
+        <div class="case-footer">
+          <div class="case-services"><span class="case-tag">Link Building</span><span class="case-tag">SEO</span><span class="case-tag">Content</span></div>
+          <span class="case-arrow">↗</span>
+        </div>
+      </div>
+
+      <!-- NovaBrands PR -->
+      <div class="case-card reveal reveal-delay-1" data-category="ecom">
+        <div class="case-header">
+          <div class="case-industry" style="background:rgba(255,107,53,0.12);border-color:rgba(255,107,53,0.3);color:var(--accent2)">🛍️ E-Commerce</div>
+          <h3>NovaBrands: 3 Forbes Mentions &amp; +18 DA in One Quarter</h3>
+          <p>A strategic Digital PR campaign secured Forbes, TechCrunch, and Wired placements, boosting domain authority and brand awareness simultaneously.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="cm-val">+18 DA</span><div class="cm-label">Authority Gain</div></div>
+          <div class="case-metric"><span class="cm-val">3</span><div class="cm-label">Forbes Features</div></div>
+        </div>
+        <div class="case-footer">
+          <div class="case-services"><span class="case-tag">Digital PR</span><span class="case-tag">Link Building</span></div>
+          <span class="case-arrow">↗</span>
+        </div>
+      </div>
+
+      <!-- FinanceHub Content -->
+      <div class="case-card reveal" data-category="finance">
+        <div class="case-header">
+          <div class="case-industry" style="background:rgba(251,191,36,0.12);border-color:rgba(251,191,36,0.3);color:var(--accent4)">💰 Finance</div>
+          <h3>FinanceHub: 2K to 47K Monthly Visitors in 8 Months</h3>
+          <p>A comprehensive content strategy combined with targeted link building exploded FinanceHub's organic traffic from a standing start.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="cm-val">47K</span><div class="cm-label">Monthly Visitors</div></div>
+          <div class="case-metric"><span class="cm-val">8mo</span><div class="cm-label">Timeline</div></div>
+        </div>
+        <div class="case-footer">
+          <div class="case-services"><span class="case-tag">Content</span><span class="case-tag">SEO</span></div>
+          <span class="case-arrow">↗</span>
+        </div>
+      </div>
+
+      <!-- LegalEdge -->
+      <div class="case-card reveal reveal-delay-1" data-category="legal">
+        <div class="case-header">
+          <div class="case-industry" style="background:rgba(0,229,160,0.12);border-color:rgba(0,229,160,0.3);color:var(--accent3)">⚖️ Legal</div>
+          <h3>LegalEdge: 6x ROI on Retainer Within 12 Months</h3>
+          <p>A highly competitive legal niche required a white-glove approach. Targeted DR65+ placements and local SEO delivered ROI that paid for the retainer 6 times over.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="cm-val">6x</span><div class="cm-label">ROI</div></div>
+          <div class="case-metric"><span class="cm-val">12mo</span><div class="cm-label">Timeline</div></div>
+        </div>
+        <div class="case-footer">
+          <div class="case-services"><span class="case-tag">Link Building</span><span class="case-tag">Local SEO</span></div>
+          <span class="case-arrow">↗</span>
+        </div>
+      </div>
+
+      <!-- EcomScaleUp -->
+      <div class="case-card reveal reveal-delay-2" data-category="ecom">
+        <div class="case-header">
+          <div class="case-industry" style="background:rgba(236,72,153,0.12);border-color:rgba(236,72,153,0.3);color:#ec4899">🛒 E-Commerce</div>
+          <h3>EcomScaleUp: 0 to 50K Organic Sessions — 6 Months</h3>
+          <p>A brand-new e-commerce site with zero authority went from launch to 50,000 monthly organic sessions through a structured link acquisition and on-page SEO program.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="cm-val">50K</span><div class="cm-label">Monthly Sessions</div></div>
+          <div class="case-metric"><span class="cm-val">6mo</span><div class="cm-label">From Zero</div></div>
+        </div>
+        <div class="case-footer">
+          <div class="case-services"><span class="case-tag">Link Building</span><span class="case-tag">Technical SEO</span></div>
+          <span class="case-arrow">↗</span>
+        </div>
+      </div>
+
+      <!-- HealthMed -->
+      <div class="case-card reveal" data-category="health">
+        <div class="case-header">
+          <div class="case-industry" style="background:rgba(59,130,246,0.12);border-color:rgba(59,130,246,0.3);color:#3b82f6">🏥 Health</div>
+          <h3>HealthMed: YMYL Niche — #1 Rankings on 14 Keywords</h3>
+          <p>In a highly scrutinised YMYL niche, we built editorial authority through expert-authored content and top-tier medical publication links, achieving 14 first-page #1 positions.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="cm-val">14</span><div class="cm-label">#1 Rankings</div></div>
+          <div class="case-metric"><span class="cm-val">220%</span><div class="cm-label">Traffic Growth</div></div>
+        </div>
+        <div class="case-footer">
+          <div class="case-services"><span class="case-tag">Link Building</span><span class="case-tag">Content</span></div>
+          <span class="case-arrow">↗</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social proof band -->
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="sb-item"><span class="sb-num">1,200+</span><div class="sb-label">Campaigns Run</div></div>
+    <div class="sb-item"><span class="sb-num">50+</span><div class="sb-label">Industries Served</div></div>
+    <div class="sb-item"><span class="sb-num">DR70+</span><div class="sb-label">Avg. Placement Quality</div></div>
+    <div class="sb-item"><span class="sb-num">4.9★</span><div class="sb-label">Client Rating</div></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="cta-text">
+      <h2>Want results like these?</h2>
+      <p>Book a free strategy call and we'll outline exactly what's possible for your business based on your niche, competition, and goals.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-white">Book Free Strategy Call →</a>
+      <small>Free · No commitment required</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="nav-logo"><span class="logo-icon">⚡</span>Rank<span class="accent">Linkus</span></a><p>Your complete SEO &amp; link building partner. Ethical strategies, transparent results.</p><div class="footer-socials"><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">f</a><a href="#" class="social-btn">▶</a></div></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="services/link-building.html">Link Building</a></li><li><a href="services/digital-pr.html">Digital PR</a></li><li><a href="services/seo.html">SEO</a></li><li><a href="services/content-writing.html">Content Writing</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:outreach@ranklinkus.com">outreach@ranklinkus.com</a></li><li><a href="contact.html">Free Strategy Call</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 RankLinkus Incorporated. All rights reserved.</p><p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></p></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.case-card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RankLinkus — Your full-service SEO & link building agency. High-authority backlinks, digital PR, content writing, and proven organic growth strategies for brands worldwide.">
+<meta name="keywords" content="link building agency, SEO agency, digital PR, blogger outreach, content writing, backlinks, ranklinkus">
+<meta property="og:title" content="RankLinkus — Rank Higher. Link Smarter.">
+<meta property="og:description" content="Full-service SEO & link building partner trusted by 1,200+ brands. Real results, transparent reporting.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ranklinkus.com">
+<link rel="canonical" href="https://ranklinkus.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>RankLinkus — Rank Higher. Link Smarter. Grow Faster.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+/* =============================================
+   HOMEPAGE-SPECIFIC STYLES
+============================================= */
+
+/* ---- HERO ---- */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 140px 64px 100px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 55%, rgba(108,99,255,0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 50% at 82% 25%, rgba(255,107,53,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 60% at 50% 105%, rgba(0,229,160,0.05) 0%, transparent 50%);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(108,99,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,99,255,0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  animation: gridDrift 22s linear infinite;
+}
+@keyframes gridDrift {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(64px); }
+}
+.hero-content {
+  position: relative; max-width: 740px; z-index: 1;
+  animation: heroIn 1s cubic-bezier(0.22,1,0.36,1) both;
+}
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(44px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero h1 {
+  font-family: var(--heading);
+  font-size: clamp(50px, 7.5vw, 92px);
+  font-weight: 800; line-height: 1.0;
+  letter-spacing: -3.5px; margin-bottom: 26px;
+  animation: heroIn 1s 0.1s cubic-bezier(0.22,1,0.36,1) both;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-sub {
+  font-size: 18px; color: var(--muted);
+  max-width: 530px; margin-bottom: 36px; line-height: 1.78;
+  animation: heroIn 1s 0.18s cubic-bezier(0.22,1,0.36,1) both;
+}
+.hero-bullets {
+  display: flex; flex-direction: column; gap: 12px;
+  margin-bottom: 44px;
+  animation: heroIn 1s 0.24s cubic-bezier(0.22,1,0.36,1) both;
+}
+.hero-bullets li {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15px; color: var(--muted);
+}
+.hero-bullets li::before {
+  content: '';
+  width: 20px; height: 20px; flex-shrink: 0;
+  background: rgba(0,229,160,0.15);
+  border: 1px solid rgba(0,229,160,0.35);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300e5a0' stroke-width='2.5'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size: 11px; background-position: center; background-repeat: no-repeat;
+}
+.hero-rating {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 36px;
+  animation: heroIn 1s 0.3s cubic-bezier(0.22,1,0.36,1) both;
+}
+.stars { color: var(--accent4); font-size: 15px; letter-spacing: 2px; }
+.hero-rating span { font-size: 14px; color: var(--muted); }
+.hero-actions {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  animation: heroIn 1s 0.36s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* Floating stats (desktop) */
+.hero-stats {
+  position: absolute; right: 64px; top: 50%;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 16px; z-index: 1;
+  animation: heroIn 1s 0.4s cubic-bezier(0.22,1,0.36,1) both;
+}
+.stat-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 20px 24px;
+  text-align: center; min-width: 148px;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.stat-card:hover { transform: translateY(-5px); border-color: rgba(108,99,255,0.3); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+.stat-card .num {
+  font-family: var(--heading); font-size: 30px; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  display: block; line-height: 1;
+}
+.stat-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 6px; }
+
+/* ---- ABOUT SECTION ---- */
+.about-section { background: var(--bg2); padding: 110px 64px; position: relative; overflow: hidden; }
+.about-section::after {
+  content: ''; position: absolute; top: -250px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(108,99,255,0.05), transparent 70%);
+  pointer-events: none;
+}
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+  max-width: var(--container); margin: 0 auto;
+}
+.about-text p { color: var(--muted); font-size: 16px; line-height: 1.88; margin-bottom: 20px; }
+.about-text p strong { color: var(--text); font-weight: 500; }
+.about-counters { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 40px; }
+.counter-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.counter-item:hover { border-color: rgba(108,99,255,0.3); transform: translateY(-3px); }
+.counter-num {
+  font-family: var(--heading); font-size: 38px; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1;
+}
+.counter-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+.about-visual { position: relative; }
+.about-card-stack { position: relative; height: 440px; }
+.acard {
+  position: absolute;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 28px;
+  transition: transform 0.35s;
+}
+.acard:hover { transform: scale(1.02) rotate(0deg) !important; }
+.acard:nth-child(1) { top: 0; left: 0; right: 0; transform: rotate(-2.5deg); border-color: rgba(108,99,255,0.22); background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(108,99,255,0.04)); }
+.acard:nth-child(2) { top: 110px; left: 25px; right: -25px; transform: rotate(1.5deg); border-color: rgba(255,107,53,0.2); background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,107,53,0.02)); }
+.acard:nth-child(3) { top: 220px; left: -10px; right: 12px; transform: rotate(-1deg); border-color: rgba(0,229,160,0.2); background: linear-gradient(135deg, rgba(0,229,160,0.08), rgba(0,229,160,0.02)); }
+.acard-icon { font-size: 28px; margin-bottom: 12px; }
+.acard h4 { font-family: var(--heading); font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.acard p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* ---- SERVICES SECTION ---- */
+.services-section { padding: 110px 64px; background: var(--bg); }
+.services-section .container { max-width: var(--container); margin: 0 auto; }
+.services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-card.featured { grid-column: span 2; }
+
+/* ---- PROCESS SECTION ---- */
+.process-section { background: var(--bg2); padding: 110px 64px; }
+.process-inner { max-width: var(--container); margin: 0 auto; }
+.process-header { text-align: center; margin-bottom: 72px; }
+
+/* ---- TESTIMONIALS ---- */
+.testimonials-section { background: var(--bg); padding: 110px 0 100px; overflow: hidden; }
+.testimonials-header { max-width: var(--container); margin: 0 auto 56px; text-align: center; padding: 0 64px; }
+
+/* RESPONSIVE HERO */
+@media (max-width: 1200px) { .hero-stats { display: none; } }
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; gap: 56px; }
+  .about-card-stack { height: 300px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .service-card.featured { grid-column: span 1; }
+}
+@media (max-width: 768px) {
+  .hero { padding: 130px 24px 80px; }
+  .hero h1 { letter-spacing: -2px; }
+  .about-section { padding: 80px 24px; }
+  .services-section { padding: 80px 24px; }
+  .services-header { flex-direction: column; gap: 24px; align-items: flex-start; }
+  .services-grid { grid-template-columns: 1fr; }
+  .process-section { padding: 80px 24px; }
+  .testimonials-header { padding: 0 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav id="navbar" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="RankLinkus Home">
+    <span class="logo-icon" aria-hidden="true">⚡</span>
+    Rank<span class="accent">Linkus</span>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="pages/about.html">About</a></li>
+    <li class="has-dropdown">
+      <a href="pages/services.html" aria-haspopup="true">Services ▾</a>
+      <div class="dropdown" role="menu">
+        <a href="pages/services/link-building.html" role="menuitem"><span class="di">🔗</span> Link Building</a>
+        <a href="pages/services/digital-pr.html" role="menuitem"><span class="di">📣</span> Digital PR</a>
+        <a href="pages/services/seo.html" role="menuitem"><span class="di">🔍</span> SEO</a>
+        <a href="pages/services/content-writing.html" role="menuitem"><span class="di">✍️</span> Content Writing</a>
+        <a href="pages/services/design-video.html" role="menuitem"><span class="di">🎬</span> Design &amp; Video</a>
+      </div>
+    </li>
+    <li><a href="pages/pricing.html">Pricing</a></li>
+    <li><a href="pages/case-studies.html">Case Studies</a></li>
+    <li><a href="pages/blog.html">Blog</a></li>
+    <li><a href="pages/contact.html" class="nav-cta">Let's Talk</a></li>
+  </ul>
+
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">🏠 Home</a>
+  <a href="pages/about.html">About Us</a>
+  <a href="pages/services.html">Services</a>
+  <a href="pages/pricing.html">Pricing</a>
+  <a href="pages/case-studies.html">Case Studies</a>
+  <a href="pages/blog.html">Blog</a>
+  <a href="pages/contact.html" class="mobile-cta">Let's Talk →</a>
+</nav>
+
+<!-- ========== HERO ========== -->
+<main>
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="badge" role="note">Trusted by 1,200+ Brands Worldwide</div>
+
+    <h1>Rank Higher.<br><em>Link Smarter.</em><br>Grow Faster.</h1>
+
+    <p class="hero-sub">
+      RankLinkus is your full-service SEO &amp; link building partner — from high-authority backlinks to digital PR, content writing, and beyond.
+    </p>
+
+    <ul class="hero-bullets" aria-label="Key benefits">
+      <li>Experience 80%+ increase in organic traffic</li>
+      <li>Data-driven, result-oriented campaigns</li>
+      <li>Streamline growth with consistent, measurable ROI</li>
+    </ul>
+
+    <div class="hero-rating" aria-label="Customer rating">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <span>Rated <strong style="color:var(--text)">4.9/5</strong> across 1,400+ verified reviews</span>
+    </div>
+
+    <div class="hero-actions">
+      <a href="pages/services.html" class="btn-primary">Explore Services</a>
+      <a href="pages/contact.html" class="btn-ghost">
+        Free Strategy Call
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating stat cards — desktop only -->
+  <div class="hero-stats" aria-hidden="true">
+    <div class="stat-card">
+      <span class="num">10K+</span>
+      <div class="label">Links Built</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">98%</span>
+      <div class="label">Client Retention</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">12+</span>
+      <div class="label">Years Active</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">50+</span>
+      <div class="label">Niches Covered</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MARQUEE ========== -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="mi-icon">🔗</span> Link Building</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📣</span> Digital PR</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🔍</span> SEO</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">✍️</span> Content Writing</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📰</span> Press Release</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🎯</span> Blogger Outreach</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🌐</span> Niche Edits</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📊</span> Keyword Research</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📍</span> Local Citations</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🗞️</span> Media Placements</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🎬</span> Explainer Videos</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🖼️</span> Infographic Outreach</div><div class="marquee-dot"></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item"><span class="mi-icon">🔗</span> Link Building</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📣</span> Digital PR</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🔍</span> SEO</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">✍️</span> Content Writing</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📰</span> Press Release</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🎯</span> Blogger Outreach</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🌐</span> Niche Edits</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📊</span> Keyword Research</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">📍</span> Local Citations</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🗞️</span> Media Placements</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🎬</span> Explainer Videos</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><span class="mi-icon">🖼️</span> Infographic Outreach</div><div class="marquee-dot"></div>
+  </div>
+</div>
+
+<!-- ========== ABOUT ========== -->
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="section-label">About RankLinkus</div>
+      <h2 class="section-title">The Digital Growth Partner Your Business Deserves</h2>
+      <p>The innovative team at <strong>RankLinkus</strong> is built for one thing: measurable growth. We don't hide behind vanity metrics — we deliver <strong>leads, rankings, and revenue</strong>.</p>
+      <p>Our can-do attitude and creative expertise sets us apart. We act as an extension of your team, ensuring every dollar you invest returns its full value.</p>
+      <div class="about-counters">
+        <div class="counter-item reveal reveal-delay-1">
+          <div class="counter-num" data-target="12" data-suffix="+">12+</div>
+          <div class="counter-label">Years of Experience</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-2">
+          <div class="counter-num" data-target="1200" data-suffix="+">1,200+</div>
+          <div class="counter-label">Successful Campaigns</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-3">
+          <div class="counter-num" data-target="900" data-suffix="+">900+</div>
+          <div class="counter-label">International Clients</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-4">
+          <div class="counter-num" data-target="25" data-suffix="+">25+</div>
+          <div class="counter-label">Services Offered</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual reveal reveal-delay-2">
+      <div class="about-card-stack">
+        <div class="acard"><div class="acard-icon">🏆</div><h4>Award-Winning SEO Strategy</h4><p>Our data-first approach consistently delivers top 3 rankings for competitive keywords across every niche.</p></div>
+        <div class="acard"><div class="acard-icon">🔗</div><h4>Premium Link Acquisition</h4><p>We secure placements on DR70+ domains through genuine editorial relationships — no spam, no PBNs.</p></div>
+        <div class="acard"><div class="acard-icon">📈</div><h4>Transparent ROI Reporting</h4><p>Real dashboards, real numbers. Know exactly what your investment is returning every single month.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div>
+        <div class="section-label">Our Deliverables</div>
+        <h2 class="section-title">The Digital All-Rounder<br>Your Business Needs</h2>
+      </div>
+      <a href="pages/services.html" class="btn-primary">See All Services</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card c1 featured reveal">
+        <div class="sc-arrow" aria-hidden="true">↗</div>
+        <div class="sc-icon purple">🔗</div>
+        <h3>Link Building</h3>
+        <p>Generate quality leads and strengthen your authority with result-driven backlink campaigns. We build links on real, high-traffic websites your audience actually reads.</p>
+        <div class="sc-tags"><span class="sc-tag">Blogger Outreach</span><span class="sc-tag">Niche Edits</span><span class="sc-tag">Infographic Links</span><span class="sc-tag">Multilingual</span></div>
+      </div>
+      <div class="service-card c2 reveal reveal-delay-1">
+        <div class="sc-arrow" aria-hidden="true">↗</div>
+        <div class="sc-icon orange">📣</div>
+        <h3>Digital PR</h3>
+        <p>Amplify your brand through strategic media placements, expert quote links, and press release distribution that reaches the right audience at the right time.</p>
+        <div class="sc-tags"><span class="sc-tag">Press Releases</span><span class="sc-tag">Expert Quotes</span><span class="sc-tag">Media Placements</span></div>
+      </div>
+      <div class="service-card c3 reveal reveal-delay-2">
+        <div class="sc-arrow" aria-hidden="true">↗</div>
+        <div class="sc-icon green">🔍</div>
+        <h3>SEO</h3>
+        <p>Unleash a wave of organic traffic through our data-driven SEO approach — keyword research, local citations, technical audits, and content planning.</p>
+        <div class="sc-tags"><span class="sc-tag">Keyword Research</span><span class="sc-tag">Local Citations</span><span class="sc-tag">Technical Audit</span></div>
+      </div>
+      <div class="service-card c4 reveal reveal-delay-3">
+        <div class="sc-arrow" aria-hidden="true">↗</div>
+        <div class="sc-icon yellow">✍️</div>
+        <h3>Content Writing</h3>
+        <p>Expert writers who understand both your audience and Google's algorithms — delivering fast-ranking content that converts and communicates.</p>
+        <div class="sc-tags"><span class="sc-tag">Blog Writing</span><span class="sc-tag">Copywriting</span><span class="sc-tag">Article Writing</span></div>
+      </div>
+      <div class="service-card c5 reveal reveal-delay-4">
+        <div class="sc-arrow" aria-hidden="true">↗</div>
+        <div class="sc-icon pink">🎬</div>
+        <h3>Design &amp; Video</h3>
+        <p>Cut through the noise with explainer videos, social ads, infographics, and visual content that captures attention and drives conversions.</p>
+        <div class="sc-tags"><span class="sc-tag">Explainer Video</span><span class="sc-tag">Social Ads</span><span class="sc-tag">Infographics</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS BAND ========== -->
+<div class="stats-band" aria-label="Agency statistics">
+  <div class="stats-inner">
+    <div class="sb-item"><span class="sb-num" data-target="2013" data-suffix="">2013</span><div class="sb-label">Founded In</div></div>
+    <div class="sb-item"><span class="sb-num" data-target="50000" data-suffix="+">50K+</span><div class="sb-label">Agency Accounts</div></div>
+    <div class="sb-item"><span class="sb-num" data-target="25" data-suffix="+">25+</span><div class="sb-label">Services Offered</div></div>
+    <div class="sb-item"><span class="sb-num" data-target="98" data-suffix="%">98%</span><div class="sb-label">Client Satisfaction</div></div>
+  </div>
+</div>
+
+<!-- ========== PROCESS ========== -->
+<section class="process-section" id="process">
+  <div class="process-inner">
+    <div class="process-header reveal">
+      <div class="section-label" style="justify-content:center">How It Works</div>
+      <h2 class="section-title" style="text-align:center">From Strategy to Results<br>in 4 Simple Steps</h2>
+    </div>
+    <div class="process-steps">
+      <div class="ps-item reveal">
+        <div class="ps-num">01</div>
+        <h4>Discovery Call</h4>
+        <p>We audit your SEO, backlink profile, and competitors to identify opportunities and define clear goals.</p>
+      </div>
+      <div class="ps-item reveal reveal-delay-1">
+        <div class="ps-num">02</div>
+        <h4>Custom Strategy</h4>
+        <p>Our team builds a bespoke roadmap tailored to your niche, budget, and timeline with projected milestones.</p>
+      </div>
+      <div class="ps-item reveal reveal-delay-2">
+        <div class="ps-num">03</div>
+        <h4>Execution</h4>
+        <p>We execute outreach, build links, publish content, and secure PR placements — all documented in real time.</p>
+      </div>
+      <div class="ps-item reveal reveal-delay-3">
+        <div class="ps-num">04</div>
+        <h4>Report &amp; Scale</h4>
+        <p>Monthly transparency reports with rankings, traffic, and DA metrics. We iterate and scale what's working.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-header reveal">
+    <div class="section-label" style="justify-content:center">Client Reviews</div>
+    <h2 class="section-title">What Our Clients Are Saying</h2>
+    <p class="section-desc" style="margin: 0 auto; text-align:center">Real results from real brands. No fluff, no cherry-picking.</p>
+  </div>
+  <div style="overflow:hidden">
+    <div class="testimonials-track" aria-label="Client testimonials carousel">
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"RankLinkus took us from page 3 to position 1 for our main keyword in under 5 months. The link quality is genuinely exceptional — real DR70+ placements."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(108,99,255,0.2);color:var(--accent)">JM</div><div class="testim-author-info"><div class="name">James Mitchell</div><div class="role">CEO, TechFlow SaaS</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"The Digital PR team secured us 3 Forbes mentions and a TechCrunch feature in one quarter. Our domain authority jumped 18 points. Absolutely worth every penny."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(255,107,53,0.2);color:var(--accent2)">SR</div><div class="testim-author-info"><div class="name">Sofia Reyes</div><div class="role">Marketing Director, NovaBrands</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"We tried 3 link building agencies before RankLinkus. The difference is night and day — transparent reporting, no PBN nonsense, and actual traffic results."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(0,229,160,0.2);color:var(--accent3)">AK</div><div class="testim-author-info"><div class="name">Amir Khan</div><div class="role">Founder, EcomScaleUp</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"Content writing team is phenomenal. Our blog went from 2K to 47K monthly visits in 8 months. The team understood our technical niche immediately."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(251,191,36,0.2);color:#fbbf24">LP</div><div class="testim-author-info"><div class="name">Laura Peterson</div><div class="role">Head of Growth, FinanceHub</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"Best investment we made this year. ROI from organic traffic alone paid for the retainer 6x over. RankLinkus is now a permanent part of our marketing stack."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(236,72,153,0.2);color:#ec4899">DW</div><div class="testim-author-info"><div class="name">David Wong</div><div class="role">CMO, LegalEdge Platform</div></div></div></div>
+      <!-- Duplicate -->
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"RankLinkus took us from page 3 to position 1 for our main keyword in under 5 months. The link quality is genuinely exceptional — real DR70+ placements."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(108,99,255,0.2);color:var(--accent)">JM</div><div class="testim-author-info"><div class="name">James Mitchell</div><div class="role">CEO, TechFlow SaaS</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"The Digital PR team secured us 3 Forbes mentions and a TechCrunch feature in one quarter. Our domain authority jumped 18 points. Absolutely worth every penny."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(255,107,53,0.2);color:var(--accent2)">SR</div><div class="testim-author-info"><div class="name">Sofia Reyes</div><div class="role">Marketing Director, NovaBrands</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"We tried 3 link building agencies before RankLinkus. The difference is night and day — transparent reporting, no PBN nonsense, and actual traffic results."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(0,229,160,0.2);color:var(--accent3)">AK</div><div class="testim-author-info"><div class="name">Amir Khan</div><div class="role">Founder, EcomScaleUp</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"Content writing team is phenomenal. Our blog went from 2K to 47K monthly visits in 8 months. The team understood our technical niche immediately."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(251,191,36,0.2);color:#fbbf24">LP</div><div class="testim-author-info"><div class="name">Laura Peterson</div><div class="role">Head of Growth, FinanceHub</div></div></div></div>
+      <div class="testim-card"><div class="testim-stars">★★★★★</div><p class="testim-text">"Best investment we made this year. ROI from organic traffic alone paid for the retainer 6x over. RankLinkus is now a permanent part of our marketing stack."</p><div class="testim-author"><div class="testim-avatar" style="background:rgba(236,72,153,0.2);color:#ec4899">DW</div><div class="testim-author-info"><div class="name">David Wong</div><div class="role">CMO, LegalEdge Platform</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner reveal">
+    <div class="cta-text">
+      <h2>Have a project in mind?<br>Let's build something great.</h2>
+      <p>Schedule a free strategy call — zero commitment, 100% actionable insights.</p>
+      <div class="cta-meta">
+        <div class="cta-meta-item"><span class="cm-num">2013</span><span class="cm-label">Founded In</span></div>
+        <div class="cta-meta-item"><span class="cm-num">50K+</span><span class="cm-label">Agency Accounts</span></div>
+        <div class="cta-meta-item"><span class="cm-num">25+</span><span class="cm-label">Services</span></div>
+      </div>
+    </div>
+    <div class="cta-actions">
+      <a href="pages/contact.html" class="btn-white">Let's Talk →</a>
+      <small>Free strategy call · No commitment</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">⚡</span>Rank<span class="accent">Linkus</span></a>
+      <p>Your complete SEO &amp; link building partner. We help brands rank higher, build authority, and grow faster through ethical, data-driven strategies.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Twitter/X">𝕏</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-btn" aria-label="Facebook">f</a>
+        <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="pages/services/link-building.html">Link Building</a></li>
+        <li><a href="pages/services/content-writing.html">Content Writing</a></li>
+        <li><a href="pages/services/design-video.html">Design &amp; Video</a></li>
+        <li><a href="pages/services/digital-pr.html">Digital PR</a></li>
+        <li><a href="pages/services/seo.html">SEO</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/case-studies.html">Case Studies</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/pricing.html">Pricing</a></li>
+        <li><a href="pages/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:outreach@ranklinkus.com">outreach@ranklinkus.com</a></li>
+        <li><a href="pages/contact.html">Free Strategy Call</a></li>
+        <li style="color:var(--muted);font-size:13px;margin-top:8px">🇵🇰 Pakistan</li>
+        <li style="color:var(--muted);font-size:13px">🇬🇧 United Kingdom</li>
+        <li style="color:var(--muted);font-size:13px">🇺🇸 United States</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 RankLinkus Incorporated. All rights reserved.</p>
+    <p>
+      <a href="pages/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="pages/terms.html">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="pages/cookies.html">Cookies</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

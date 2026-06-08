@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RankLinkus Pricing — Transparent SEO and link building packages. Starter, Growth, and Authority plans with no hidden fees.">
+<meta name="keywords" content="link building pricing, SEO packages, digital PR cost, content writing packages">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ranklinkus.com/pages/pricing.html">
+<title>Pricing — RankLinkus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.pricing-section { padding: 80px 64px 110px; background: var(--bg); }
+.pricing-section .container { max-width: var(--container); margin: 0 auto; }
+.pricing-toggle { display: flex; align-items: center; gap: 16px; justify-content: center; margin-bottom: 56px; font-size: 15px; font-weight: 500; }
+.toggle-switch { position: relative; width: 52px; height: 28px; cursor: pointer; }
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.toggle-slider { position: absolute; inset: 0; background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; transition: background 0.3s; }
+.toggle-slider::before { content: ''; position: absolute; width: 20px; height: 20px; left: 4px; top: 3px; background: var(--accent); border-radius: 50%; transition: transform 0.3s; }
+.toggle-switch input:checked ~ .toggle-slider { background: rgba(108,99,255,0.2); }
+.toggle-switch input:checked ~ .toggle-slider::before { transform: translateX(24px); }
+.save-badge { background: rgba(0,229,160,0.15); border: 1px solid rgba(0,229,160,0.3); color: var(--accent3); font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 100px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 60px; }
+.pricing-card h3 { font-family: var(--heading); font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+.pricing-card .price-desc { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+.pricing-divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+.add-ons { padding: 80px 64px; background: var(--bg2); }
+.add-ons .container { max-width: var(--container); margin: 0 auto; }
+.add-ons-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 50px; }
+.add-on-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; transition: transform 0.2s, border-color 0.2s; }
+.add-on-card:hover { transform: translateY(-4px); border-color: rgba(108,99,255,0.3); }
+.add-on-card .ao-price { font-family: var(--heading); font-size: 26px; font-weight: 800; color: var(--accent); }
+.add-on-card h4 { font-family: var(--heading); font-size: 15px; font-weight: 700; margin: 8px 0 6px; }
+.add-on-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.faq-section { padding: 80px 64px 110px; background: var(--bg); }
+.faq-section .container { max-width: 780px; margin: 0 auto; }
+.faq-section .section-label { display: flex; justify-content: center; }
+@media (max-width:1024px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto 60px; } .add-ons-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width:768px) { .pricing-section { padding: 70px 20px; } .add-ons { padding: 70px 20px; } .faq-section { padding: 70px 20px; } .add-ons-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><span class="logo-icon">⚡</span>Rank<span class="accent">Linkus</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html">Services ▾</a>
+      <div class="dropdown">
+        <a href="services/link-building.html"><span class="di">🔗</span> Link Building</a>
+        <a href="services/digital-pr.html"><span class="di">📣</span> Digital PR</a>
+        <a href="services/seo.html"><span class="di">🔍</span> SEO</a>
+        <a href="services/content-writing.html"><span class="di">✍️</span> Content Writing</a>
+        <a href="services/design-video.html"><span class="di">🎬</span> Design &amp; Video</a>
+      </div>
+    </li>
+    <li><a href="pricing.html" class="active">Pricing</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav">
+  <a href="../index.html">🏠 Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="mobile-cta">Let's Talk →</a>
+</nav>
+
+<main>
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="badge">Transparent, No-Surprise Pricing</div>
+    <h1>Simple Pricing.<br><em>Serious Results.</em></h1>
+    <p style="margin-top:20px">No hidden fees, no lock-in contracts. Cancel anytime. All plans include a dedicated account manager.</p>
+  </div>
+</div>
+
+<section class="pricing-section">
+  <div class="container">
+    <div class="pricing-toggle reveal">
+      <span>Monthly</span>
+      <label class="toggle-switch" aria-label="Toggle annual billing">
+        <input type="checkbox" id="billingToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span>Annual <span class="save-badge">Save 20%</span></span>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Starter -->
+      <div class="pricing-card reveal">
+        <h3>Starter</h3>
+        <p class="price-desc">Perfect for new businesses building authority</p>
+        <div>
+          <span class="price-amount"><span>$</span><span class="price-val" data-monthly="799" data-annual="639">799</span></span>
+          <span class="price-period" id="period1">/ month</span>
+        </div>
+        <hr class="pricing-divider">
+        <ul class="price-features">
+          <li>5 Premium backlinks/month (DR50+)</li>
+          <li>1 Blog post (1,500 words)</li>
+          <li>Monthly keyword rank report</li>
+          <li>Dedicated account manager</li>
+          <li>Live reporting dashboard</li>
+          <li class="muted">Digital PR placements</li>
+          <li class="muted">Technical SEO audit</li>
+          <li class="muted">White-label delivery</li>
+        </ul>
+        <a href="contact.html" class="btn-secondary" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+
+      <!-- Growth - Featured -->
+      <div class="pricing-card featured reveal reveal-delay-1">
+        <div class="pricing-badge">Most Popular</div>
+        <h3>Growth</h3>
+        <p class="price-desc">For established brands scaling organic presence</p>
+        <div>
+          <span class="price-amount"><span>$</span><span class="price-val" data-monthly="1,799" data-annual="1,439">1,799</span></span>
+          <span class="price-period">/ month</span>
+        </div>
+        <hr class="pricing-divider">
+        <ul class="price-features">
+          <li>15 Premium backlinks/month (DR60+)</li>
+          <li>4 Blog posts (2,000 words each)</li>
+          <li>1 Digital PR placement</li>
+          <li>Full technical SEO audit</li>
+          <li>Monthly keyword rank report</li>
+          <li>Dedicated account manager</li>
+          <li>Live reporting dashboard</li>
+          <li class="muted">White-label delivery</li>
+        </ul>
+        <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+
+      <!-- Authority -->
+      <div class="pricing-card reveal reveal-delay-2">
+        <h3>Authority</h3>
+        <p class="price-desc">For competitive brands demanding top positions</p>
+        <div>
+          <span class="price-amount"><span>$</span><span class="price-val" data-monthly="3,499" data-annual="2,799">3,499</span></span>
+          <span class="price-period">/ month</span>
+        </div>
+        <hr class="pricing-divider">
+        <ul class="price-features">
+          <li>30 Premium backlinks/month (DR70+)</li>
+          <li>8 Blog posts (2,500 words each)</li>
+          <li>3 Digital PR placements</li>
+          <li>Full technical SEO + on-page</li>
+          <li>Weekly keyword rank reports</li>
+          <li>Dedicated senior strategist</li>
+          <li>Live reporting dashboard</li>
+          <li>White-label delivery available</li>
+        </ul>
+        <a href="contact.html" class="btn-secondary" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:32px;text-align:center;max-width:700px;margin:0 auto">
+      <p style="font-size:16px;font-weight:600;margin-bottom:8px">🏢 Need a custom enterprise plan?</p>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:20px">We work with agencies, large e-commerce brands, and enterprises on fully custom white-label packages. Let's talk numbers.</p>
+      <a href="contact.html" class="btn-primary">Contact for Custom Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- Add-ons -->
+<section class="add-ons">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:10px">
+      <div class="section-label" style="justify-content:center">Add-On Services</div>
+      <h2 class="section-title">Enhance Any Plan</h2>
+      <p class="section-desc" style="margin:0 auto;text-align:center">Layer additional services onto any package.</p>
+    </div>
+    <div class="add-ons-grid">
+      <div class="add-on-card reveal"><div class="ao-price">$299</div><h4>Press Release</h4><p>Written and distributed to 500+ outlets. Guaranteed 200+ pickups.</p></div>
+      <div class="add-on-card reveal reveal-delay-1"><div class="ao-price">$149</div><h4>Extra Blog Post</h4><p>2,000-word SEO-optimized article added to any plan.</p></div>
+      <div class="add-on-card reveal reveal-delay-2"><div class="ao-price">$499</div><h4>Infographic + Outreach</h4><p>Custom infographic design plus outreach to 50+ publishers.</p></div>
+      <div class="add-on-card reveal reveal-delay-3"><div class="ao-price">$799</div><h4>Explainer Video</h4><p>60-second animated explainer video, fully scripted and produced.</p></div>
+      <div class="add-on-card reveal"><div class="ao-price">$399</div><h4>Technical SEO Audit</h4><p>80+ point technical audit with prioritised fix recommendations.</p></div>
+      <div class="add-on-card reveal reveal-delay-1"><div class="ao-price">$199</div><h4>Competitor Backlink Report</h4><p>Full backlink gap analysis against your top 3 competitors.</p></div>
+      <div class="add-on-card reveal reveal-delay-2"><div class="ao-price">$99</div><h4>Local Citation Pack</h4><p>50 consistent NAP citations across top local directories.</p></div>
+      <div class="add-on-card reveal reveal-delay-3"><div class="ao-price">POA</div><h4>White-Label Reseller</h4><p>Full white-label SEO and link building at agency scale. Custom pricing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:50px">
+      <div class="section-label" style="justify-content:center">FAQ</div>
+      <h2 class="section-title">Pricing Questions Answered</h2>
+    </div>
+    <div class="reveal">
+      <div class="faq-item open">
+        <div class="faq-question"><h4>Are there any setup fees or contracts?</h4><span class="faq-toggle">+</span></div>
+        <div class="faq-answer">No setup fees and no long-term contracts. All plans are month-to-month and can be cancelled with 30 days notice. We earn your business every month.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h4>How quickly will I see results?</h4><span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Link building typically shows ranking improvements within 6–12 weeks. Digital PR can generate immediate traffic. SEO is a long-term investment — most clients see significant traffic growth within 3–6 months.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h4>Do you offer white-label services for agencies?</h4><span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Yes. We power SEO and link building for 200+ agencies under their own brand. All deliverables are fully unbranded and we sign NDAs. Contact us for white-label pricing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h4>What does "DR70+" mean?</h4><span class="faq-toggle">+</span></div>
+        <div class="faq-answer">DR stands for Domain Rating, an Ahrefs metric measuring a website's backlink authority on a scale of 0–100. DR70+ sites are high-authority publications — think established news sites, industry blogs, and major online magazines. These links carry significant SEO weight.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h4>Can I upgrade or downgrade my plan?</h4><span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Absolutely. You can change plans at any time. Upgrades take effect immediately; downgrades take effect from the next billing cycle.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h4>How do I track progress?</h4><span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Every client gets access to a live reporting dashboard showing all published links, keyword rankings, traffic data, and DA metrics. You also receive a detailed monthly report from your account manager.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="cta-text">
+      <h2>Not sure which plan is right for you?</h2>
+      <p>Book a free 30-minute strategy call. We'll audit your site, review your competitors, and recommend exactly what you need — no upsell, no pressure.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-white">Book Free Strategy Call →</a>
+      <small>Free · No commitment · 48hr response</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="nav-logo"><span class="logo-icon">⚡</span>Rank<span class="accent">Linkus</span></a><p>Your complete SEO &amp; link building partner. Ethical strategies, transparent results.</p><div class="footer-socials"><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">f</a><a href="#" class="social-btn">▶</a></div></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="services/link-building.html">Link Building</a></li><li><a href="services/digital-pr.html">Digital PR</a></li><li><a href="services/seo.html">SEO</a></li><li><a href="services/content-writing.html">Content Writing</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:outreach@ranklinkus.com">outreach@ranklinkus.com</a></li><li><a href="contact.html">Free Strategy Call</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 RankLinkus Incorporated. All rights reserved.</p><p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></p></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+// Billing toggle
+const toggle = document.getElementById('billingToggle');
+if (toggle) {
+  toggle.addEventListener('change', () => {
+    const annual = toggle.checked;
+    document.querySelectorAll('.price-val').forEach(el => {
+      el.textContent = annual ? el.dataset.annual : el.dataset.monthly;
+    });
+  });
+}
+</script>
+</body>
+</html>

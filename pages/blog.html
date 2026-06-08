@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RankLinkus Blog — Expert SEO tips, link building guides, digital PR strategies, and content marketing insights from the team at RankLinkus.">
+<meta name="keywords" content="SEO blog, link building tips, digital PR guide, content marketing, keyword research tips">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ranklinkus.com/pages/blog.html">
+<title>Blog — RankLinkus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.blog-section { padding: 80px 64px 110px; background: var(--bg); }
+.blog-section .container { max-width: var(--container); margin: 0 auto; }
+.blog-layout { display: grid; grid-template-columns: 1fr 340px; gap: 60px; align-items: start; }
+
+/* Featured post */
+.featured-post { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; margin-bottom: 40px; transition: transform 0.3s, border-color 0.3s; cursor: pointer; }
+.featured-post:hover { transform: translateY(-6px); border-color: rgba(108,99,255,0.3); }
+.fp-image { height: 280px; background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(255,107,53,0.15)); display: flex; align-items: center; justify-content: center; font-size: 80px; position: relative; overflow: hidden; }
+.fp-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(7,7,14,0.7)); }
+.fp-label { position: absolute; bottom: 20px; left: 24px; z-index: 1; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 12px; border-radius: 100px; }
+.fp-body { padding: 28px 32px 32px; }
+.fp-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; font-size: 12px; color: var(--muted); }
+.fp-meta .cat { color: var(--accent); font-weight: 600; }
+.fp-body h2 { font-family: var(--heading); font-size: 24px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; line-height: 1.25; }
+.fp-body p { font-size: 15px; color: var(--muted); line-height: 1.78; margin-bottom: 20px; }
+.fp-author { display: flex; align-items: center; gap: 10px; }
+.fp-avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(108,99,255,0.2); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+.fp-author-name { font-size: 13px; font-weight: 600; }
+.fp-read { font-size: 13px; color: var(--accent); margin-left: auto; font-weight: 500; }
+
+/* Blog grid */
+.blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; cursor: pointer; }
+.blog-card:hover { transform: translateY(-5px); border-color: rgba(108,99,255,0.3); }
+.bc-image { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.bc-image.i1 { background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(108,99,255,0.05)); }
+.bc-image.i2 { background: linear-gradient(135deg, rgba(255,107,53,0.15), rgba(255,107,53,0.05)); }
+.bc-image.i3 { background: linear-gradient(135deg, rgba(0,229,160,0.15), rgba(0,229,160,0.05)); }
+.bc-image.i4 { background: linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,191,36,0.05)); }
+.bc-image.i5 { background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(236,72,153,0.05)); }
+.bc-image.i6 { background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(59,130,246,0.05)); }
+.bc-body { padding: 20px; }
+.bc-meta { font-size: 11px; color: var(--muted); margin-bottom: 8px; display: flex; gap: 10px; }
+.bc-meta .bc-cat { color: var(--accent); font-weight: 600; }
+.bc-body h3 { font-family: var(--heading); font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+.bc-body p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* Sidebar */
+.blog-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 24px; }
+.sidebar-widget { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
+.sidebar-widget h4 { font-family: var(--heading); font-size: 15px; font-weight: 700; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.sw-category { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 14px; cursor: pointer; transition: color 0.2s; }
+.sw-category:last-child { border-bottom: none; }
+.sw-category:hover { color: var(--accent); }
+.sw-count { background: var(--surface2); border-radius: 100px; padding: 2px 10px; font-size: 11px; color: var(--muted); }
+.subscribe-form { display: flex; flex-direction: column; gap: 12px; }
+.subscribe-form input { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; color: var(--text); font-family: var(--body); font-size: 14px; outline: none; transition: border-color 0.2s; }
+.subscribe-form input:focus { border-color: rgba(108,99,255,0.5); }
+.subscribe-form button { background: var(--accent); color: #fff; border: none; border-radius: 100px; padding: 12px; font-family: var(--body); font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.subscribe-form button:hover { background: #7c74ff; }
+.popular-post { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--border); align-items: flex-start; cursor: pointer; }
+.popular-post:last-child { border-bottom: none; }
+.pp-num { font-family: var(--heading); font-size: 22px; font-weight: 800; color: var(--border); min-width: 32px; line-height: 1; padding-top: 2px; }
+.pp-title { font-size: 13px; font-weight: 500; line-height: 1.4; transition: color 0.2s; }
+.popular-post:hover .pp-title { color: var(--accent); }
+.pp-meta { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+@media (max-width:1100px) { .blog-layout { grid-template-columns: 1fr; } .blog-sidebar { position: static; } }
+@media (max-width:768px) { .blog-section { padding: 70px 20px; } .blog-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><span class="logo-icon">⚡</span>Rank<span class="accent">Linkus</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html">Services ▾</a>
+      <div class="dropdown">
+        <a href="services/link-building.html"><span class="di">🔗</span> Link Building</a>
+        <a href="services/digital-pr.html"><span class="di">📣</span> Digital PR</a>
+        <a href="services/seo.html"><span class="di">🔍</span> SEO</a>
+        <a href="services/content-writing.html"><span class="di">✍️</span> Content Writing</a>
+        <a href="services/design-video.html"><span class="di">🎬</span> Design &amp; Video</a>
+      </div>
+    </li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav">
+  <a href="../index.html">🏠 Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="mobile-cta">Let's Talk →</a>
+</nav>
+
+<main>
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="badge">SEO · Link Building · Digital PR · Strategy</div>
+    <h1>The RankLinkus<br><em>Resource Hub</em></h1>
+    <p style="margin-top:20px">Expert guides, deep dives, and actionable tactics from the team building rankings every day.</p>
+  </div>
+</div>
+
+<section class="blog-section">
+  <div class="container">
+    <div class="blog-layout">
+      <!-- Main content -->
+      <div>
+        <!-- Featured post -->
+        <div class="featured-post reveal" onclick="window.location.href='blog/link-building-guide-2025.html'" style="cursor:pointer">
+          <div class="fp-image">🔗<span class="fp-label">Featured</span></div>
+          <div class="fp-body">
+            <div class="fp-meta">
+              <span class="cat">Link Building</span>
+              <span>·</span>
+              <span>14 min read</span>
+              <span>·</span>
+              <span>June 2025</span>
+            </div>
+            <h2>The Complete Guide to DR70+ Link Building in 2025: Tactics That Still Work</h2>
+            <p>Everything has changed in SEO — but one thing hasn't: high-authority backlinks from editorially placed, topically relevant domains remain the single most powerful ranking factor. Here's exactly how we build them.</p>
+            <div class="fp-author">
+              <div class="fp-avatar">AR</div>
+              <span class="fp-author-name">Ali Rehman, Founder</span>
+              <span class="fp-read">Read Article →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog grid -->
+        <div class="blog-grid">
+          <div class="blog-card reveal" data-href="blog/digital-pr-guide.html">
+            <div class="bc-image i2">📣</div>
+            <div class="bc-body">
+              <div class="bc-meta"><span class="bc-cat">Digital PR</span><span>·</span><span>8 min</span></div>
+              <h3>How to Get Featured in Forbes Without a PR Agency (A Step-by-Step Guide)</h3>
+              <p>Reactive PR, data-led pitches, and expert positioning — the exact framework we use to secure Tier 1 media placements.</p>
+            </div>
+          </div>
+          <div class="blog-card reveal reveal-delay-1" data-href="blog/technical-seo-checklist.html">
+            <div class="bc-image i3">🔍</div>
+            <div class="bc-body">
+              <div class="bc-meta"><span class="bc-cat">SEO</span><span>·</span><span>11 min</span></div>
+              <h3>Technical SEO Checklist 2025: 87 Points Every Site Should Pass</h3>
+              <p>Core Web Vitals, crawl budget, schema markup, hreflang — the complete audit checklist our team runs for every new client.</p>
+            </div>
+          </div>
+          <div class="blog-card reveal" data-href="blog/topical-authority.html">
+            <div class="bc-image i4">✍️</div>
+            <div class="bc-body">
+              <div class="bc-meta"><span class="bc-cat">Content</span><span>·</span><span>9 min</span></div>
+              <h3>The Topical Authority Framework: How to Dominate an Entire Niche With Content</h3>
+              <p>Stop creating random blog posts. Here's the systematic approach to building topical authority that Google rewards.</p>
+            </div>
+          </div>
+          <div class="blog-card reveal reveal-delay-1" data-href="blog/link-building-guide-2025.html">
+            <div class="bc-image i5">🎯</div>
+            <div class="bc-body">
+              <div class="bc-meta"><span class="bc-cat">Link Building</span><span>·</span><span>6 min</span></div>
+              <h3>Niche Edits vs. Guest Posts: Which Link Type Drives More Rankings in 2025?</h3>
+              <p>We ran a 6-month controlled experiment across 40 client sites. Here's what the data actually showed.</p>
+            </div>
+          </div>
+          <div class="blog-card reveal" data-href="blog/technical-seo-checklist.html">
+            <div class="bc-image i6">📊</div>
+            <div class="bc-body">
+              <div class="bc-meta"><span class="bc-cat">SEO</span><span>·</span><span>7 min</span></div>
+              <h3>Keyword Cannibalization: How to Find It, Fix It, and Prevent It</h3>
+              <p>One of the most common and damaging SEO issues we find in audits — and most sites don't even know they have it.</p>
+            </div>
+          </div>
+          <div class="blog-card reveal reveal-delay-1" data-href="blog/link-building-guide-2025.html">
+            <div class="bc-image i1">🌐</div>
+            <div class="bc-body">
+              <div class="bc-meta"><span class="bc-cat">Agency</span><span>·</span><span>10 min</span></div>
+              <h3>White-Label SEO: The Complete Guide for Agencies Looking to Scale</h3>
+              <p>How agencies are adding $50K+/month in recurring revenue by reselling SEO services under their own brand.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:48px" class="reveal">
+          <button style="width:40px;height:40px;border-radius:10px;background:var(--accent);border:none;color:#fff;font-family:var(--heading);font-weight:700;cursor:pointer">1</button>
+          <button style="width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:var(--heading);font-weight:700;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='rgba(108,99,255,.4)'" onmouseout="this.style.borderColor='var(--border)'">2</button>
+          <button style="width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:var(--heading);font-weight:700;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='rgba(108,99,255,.4)'" onmouseout="this.style.borderColor='var(--border)'">3</button>
+          <span style="display:flex;align-items:center;color:var(--muted);padding:0 4px">…</span>
+          <button style="width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:var(--heading);font-weight:700;cursor:pointer">12</button>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+        <!-- Subscribe -->
+        <div class="sidebar-widget reveal">
+          <h4>📬 Get SEO Insights Weekly</h4>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Join 12,000+ SEOs getting our best tactics every Tuesday. Free, no spam, unsubscribe anytime.</p>
+          <div class="subscribe-form">
+            <input type="email" placeholder="your@email.com">
+            <button type="button">Subscribe Free →</button>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-widget reveal">
+          <h4>Browse by Topic</h4>
+          <div class="sw-category">🔗 Link Building <span class="sw-count">34</span></div>
+          <div class="sw-category">🔍 SEO <span class="sw-count">28</span></div>
+          <div class="sw-category">📣 Digital PR <span class="sw-count">19</span></div>
+          <div class="sw-category">✍️ Content Strategy <span class="sw-count">22</span></div>
+          <div class="sw-category">🎬 Design &amp; Video <span class="sw-count">11</span></div>
+          <div class="sw-category">🏢 Agency Growth <span class="sw-count">15</span></div>
+        </div>
+
+        <!-- Popular posts -->
+        <div class="sidebar-widget reveal">
+          <h4>Most Read Articles</h4>
+          <div class="popular-post">
+            <span class="pp-num">01</span>
+            <div><div class="pp-title">The Ultimate Blogger Outreach Email Templates (2025)</div><div class="pp-meta">12 min · Link Building</div></div>
+          </div>
+          <div class="popular-post">
+            <span class="pp-num">02</span>
+            <div><div class="pp-title">How to Recover From a Google Core Update Penalty</div><div class="pp-meta">9 min · SEO</div></div>
+          </div>
+          <div class="popular-post">
+            <span class="pp-num">03</span>
+            <div><div class="pp-title">HARO Is Dead: What Replaces It in 2025?</div><div class="pp-meta">7 min · Digital PR</div></div>
+          </div>
+          <div class="popular-post">
+            <span class="pp-num">04</span>
+            <div><div class="pp-title">How We Build 30 DR70+ Links Per Month (Process Breakdown)</div><div class="pp-meta">15 min · Link Building</div></div>
+          </div>
+        </div>
+
+        <!-- CTA widget -->
+        <div class="sidebar-widget reveal" style="background:linear-gradient(135deg,rgba(108,99,255,0.15),rgba(255,107,53,0.08));border-color:rgba(108,99,255,0.3)">
+          <h4>🚀 Free SEO Audit</h4>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Get a comprehensive audit of your site's backlink profile, technical issues, and keyword opportunities.</p>
+          <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;font-size:14px">Claim Free Audit</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="nav-logo"><span class="logo-icon">⚡</span>Rank<span class="accent">Linkus</span></a><p>Your complete SEO &amp; link building partner. Ethical strategies, transparent results.</p><div class="footer-socials"><a href="blog/link-building-guide-2025.html" class="social-btn">𝕏</a><a href="blog/technical-seo-checklist.html" class="social-btn">in</a><a href="blog/digital-pr-guide.html" class="social-btn">f</a><a href="blog/link-building-guide-2025.html" class="social-btn">▶</a></div></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="services/link-building.html">Link Building</a></li><li><a href="services/digital-pr.html">Digital PR</a></li><li><a href="services/seo.html">SEO</a></li><li><a href="services/content-writing.html">Content Writing</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:outreach@ranklinkus.com">outreach@ranklinkus.com</a></li><li><a href="contact.html">Free Strategy Call</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 RankLinkus Incorporated. All rights reserved.</p><p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></p></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

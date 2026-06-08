@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core pages -->
+  <url><loc>https://ranklinkus.com/</loc><lastmod>2025-06-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ranklinkus.com/pages/about.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ranklinkus.com/pages/services.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ranklinkus.com/pages/pricing.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ranklinkus.com/pages/case-studies.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ranklinkus.com/pages/blog.html</loc><lastmod>2025-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ranklinkus.com/pages/contact.html</loc><lastmod>2025-06-07</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <!-- Service sub-pages -->
+  <url><loc>https://ranklinkus.com/pages/services/link-building.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ranklinkus.com/pages/services/digital-pr.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ranklinkus.com/pages/services/seo.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ranklinkus.com/pages/services/content-writing.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ranklinkus.com/pages/services/design-video.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Blog posts -->
+  <url><loc>https://ranklinkus.com/pages/blog/link-building-guide-2025.html</loc><lastmod>2025-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ranklinkus.com/pages/blog/digital-pr-guide.html</loc><lastmod>2025-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ranklinkus.com/pages/blog/technical-seo-checklist.html</loc><lastmod>2025-05-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ranklinkus.com/pages/blog/topical-authority.html</loc><lastmod>2025-05-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
