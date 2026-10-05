@@ -16,8 +16,8 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About Dada Sons Group | Islamabad, Pakistan"
-        description="Dada Sons Group is a diversified business group in Islamabad, Pakistan, with divisions in textile machinery, cotton, consulting and security solutions."
+        title="About Dada Sons Group | Lahore, Pakistan"
+        description="Dada Sons Group is a diversified business group in Lahore, Pakistan, with divisions in textile machinery, cotton, consulting and security solutions."
         path="/about"
         jsonLd={[breadcrumbSchema(crumbs), organizationSchema()]}
       />
@@ -34,7 +34,7 @@ export default function About() {
           </ScrollReveal>
           <ScrollReveal className="intro__copy" delay={140}>
             <p>
-              Dada Sons Group is a diversified business group based in Islamabad, Pakistan. It operates through two business areas: Dada Sons, covering textile machinery, cotton and consulting; and Armour Tech (AAT), covering armoured vehicles, bulletproof mirrors and security equipment retrofitting.
+              Dada Sons Group is a diversified business group based in Lahore, Pakistan. It operates through two business areas: Dada Sons, covering textile machinery, cotton and consulting; and Armour Tech (AAT), covering armoured vehicles, bulletproof mirrors and security equipment retrofitting.
             </p>
             <p>
               The group brings together commercial expertise, sourcing capabilities and strategic advisory. Its work is shaped by the requirement in front of it rather than a fixed catalogue: each engagement starts with understanding what the client actually needs.

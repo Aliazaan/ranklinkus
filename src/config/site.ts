@@ -15,14 +15,13 @@ export const site = {
   copyright: '© 2026 Dada Sons Group. All Rights Reserved.',
   phone: { display: '+92 321 4522555', href: 'tel:+923214522555', e164: '+923214522555' },
   email: 'dadasons555@gmail.com',
-  // CONFIRM: the business card artwork prints a Lahore address (205/D Block Nespak Society,
-  // Phase 1). This is the Islamabad address supplied in the project brief.
+  // Address as printed on the business card.
   address: {
-    lines: ['Plot #151, Industrial Area', 'Kahuta Road', 'Humak Model Town', 'Islamabad, Pakistan'],
-    street: 'Plot #151, Industrial Area, Kahuta Road',
-    area: 'Humak Model Town',
-    city: 'Islamabad',
-    region: 'Islamabad Capital Territory',
+    lines: ['205/D Block Nespak Society', 'Phase 1', 'Lahore, Pakistan'],
+    street: '205/D Block Nespak Society, Phase 1',
+    area: 'Nespak Society',
+    city: 'Lahore',
+    region: 'Punjab',
     country: 'PK',
     countryName: 'Pakistan',
   },

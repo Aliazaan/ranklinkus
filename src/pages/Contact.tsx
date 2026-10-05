@@ -20,8 +20,8 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact Dada Sons Group | Islamabad, Pakistan"
-        description="Contact Dada Sons Group in Islamabad, Pakistan about textile machinery, cotton, consulting, armoured vehicles, bulletproof mirrors or security retrofitting."
+        title="Contact Dada Sons Group | Lahore, Pakistan"
+        description="Contact Dada Sons Group in Lahore, Pakistan about textile machinery, cotton, consulting, armoured vehicles, bulletproof mirrors or security retrofitting."
         path="/contact"
         jsonLd={[breadcrumbSchema(crumbs), localBusinessSchema()]}
       />
@@ -85,7 +85,7 @@ export default function Contact() {
               {site.address.city}, {site.address.countryName}
             </h2>
             <p>
-              {site.address.lines.slice(0, 3).join(', ')}.
+              {site.address.lines.slice(0, 2).join(', ')}.
             </p>
             <a className="text-link" href={mapsSearchUrl} target="_blank" rel="noopener noreferrer">
               <span className="text-link__label">Search this address on Google Maps</span>

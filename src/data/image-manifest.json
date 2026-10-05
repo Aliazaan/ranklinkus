@@ -321,12 +321,13 @@
     "color": "#988878"
   },
   "ceo-portrait": {
-    "width": 800,
-    "height": 1000,
+    "width": 1100,
+    "height": 1375,
     "widths": [
       480,
-      800
+      800,
+      1100
     ],
-    "color": "#181818"
+    "color": "#080808"
   }
 }

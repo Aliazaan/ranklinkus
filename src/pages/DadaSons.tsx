@@ -34,8 +34,8 @@ export default function DadaSons() {
   return (
     <div className="theme-dada">
       <Seo
-        title="Dada Sons | Textile Machinery, Cotton & Consulting, Islamabad"
-        description="Dada Sons supports buyers with textile machinery sourcing, cotton and commodity coordination, and industrial consulting. Based in Islamabad, Pakistan."
+        title="Dada Sons | Textile Machinery, Cotton & Consulting, Lahore"
+        description="Dada Sons supports buyers with textile machinery sourcing, cotton and commodity coordination, and industrial consulting. Based in Lahore, Pakistan."
         path={business.path}
         jsonLd={[breadcrumbSchema(crumbs)]}
       />
