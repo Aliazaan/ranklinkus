@@ -7,6 +7,7 @@ import About from './pages/About'
 import ArmourTech from './pages/ArmourTech'
 import Businesses from './pages/Businesses'
 import Contact from './pages/Contact'
+import Cortexley from './pages/Cortexley'
 import DadaSons from './pages/DadaSons'
 import Home from './pages/Home'
 import Industries from './pages/Industries'
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/insights" element={<Insights />} />
             <Route path="/insights/:slug" element={<InsightArticle />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/cortexley" element={<Cortexley />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </PageTransition>

@@ -25,6 +25,7 @@ export const footerNav = {
     { label: 'About', to: '/about' },
     { label: 'Leadership', to: '/about#leadership' },
     { label: 'Contact', to: '/contact' },
+    { label: 'Cortexley services', to: '/cortexley' },
   ] satisfies NavItem[],
   businesses: [
     { label: 'Dada Sons', to: '/businesses/dada-sons' },

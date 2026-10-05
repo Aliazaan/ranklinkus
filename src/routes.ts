@@ -27,6 +27,7 @@ export const routeEntries: RouteEntry[] = [
   page('/projects', 0.5),
   page('/insights', 0.6, 'weekly'),
   page('/contact', 0.8),
+  page('/cortexley', 0.4),
   ...articles.map((article) => ({
     path: `/insights/${article.slug}`,
     indexable: isPublished(article),
