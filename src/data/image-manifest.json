@@ -1,0 +1,332 @@
+{
+  "hero-textile-machinery": {
+    "width": 1280,
+    "height": 720,
+    "widths": [
+      768,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "hero-textile-machinery-portrait": {
+    "width": 1100,
+    "height": 1375,
+    "widths": [
+      480,
+      800,
+      1100
+    ],
+    "color": "#080808"
+  },
+  "hero-dada-sons": {
+    "width": 2400,
+    "height": 1350,
+    "widths": [
+      768,
+      1280,
+      1920,
+      2400
+    ],
+    "color": "#888878"
+  },
+  "hero-armour-tech": {
+    "width": 2400,
+    "height": 1350,
+    "widths": [
+      768,
+      1280,
+      1920,
+      2400
+    ],
+    "color": "#080808"
+  },
+  "hero-about": {
+    "width": 1920,
+    "height": 1080,
+    "widths": [
+      768,
+      1280,
+      1920
+    ],
+    "color": "#d8d8b8"
+  },
+  "hero-industries": {
+    "width": 1920,
+    "height": 1080,
+    "widths": [
+      768,
+      1280,
+      1920
+    ],
+    "color": "#080808"
+  },
+  "hero-solutions": {
+    "width": 1920,
+    "height": 1080,
+    "widths": [
+      768,
+      1280,
+      1920
+    ],
+    "color": "#080808"
+  },
+  "hero-projects": {
+    "width": 1920,
+    "height": 1080,
+    "widths": [
+      768,
+      1280,
+      1920
+    ],
+    "color": "#b8b8a8"
+  },
+  "hero-insights": {
+    "width": 1920,
+    "height": 1080,
+    "widths": [
+      768,
+      1280,
+      1920
+    ],
+    "color": "#080808"
+  },
+  "hero-contact": {
+    "width": 1920,
+    "height": 1080,
+    "widths": [
+      768,
+      1280,
+      1920
+    ],
+    "color": "#080808"
+  },
+  "cta-background": {
+    "width": 1920,
+    "height": 1080,
+    "widths": [
+      768,
+      1280,
+      1920
+    ],
+    "color": "#080808"
+  },
+  "business-dada-sons": {
+    "width": 1280,
+    "height": 1600,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#382818"
+  },
+  "business-armour-tech": {
+    "width": 1280,
+    "height": 1600,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "industry-textile": {
+    "width": 1024,
+    "height": 1280,
+    "widths": [
+      480,
+      768,
+      1024
+    ],
+    "color": "#b8b8a8"
+  },
+  "industry-security": {
+    "width": 1024,
+    "height": 1280,
+    "widths": [
+      480,
+      768,
+      1024
+    ],
+    "color": "#080808"
+  },
+  "industry-automotive": {
+    "width": 1024,
+    "height": 1280,
+    "widths": [
+      480,
+      768,
+      1024
+    ],
+    "color": "#080808"
+  },
+  "industry-industrial": {
+    "width": 1024,
+    "height": 1280,
+    "widths": [
+      480,
+      768,
+      1024
+    ],
+    "color": "#080808"
+  },
+  "industry-trading": {
+    "width": 1024,
+    "height": 1280,
+    "widths": [
+      480,
+      768,
+      1024
+    ],
+    "color": "#282828"
+  },
+  "solution-textile-machinery": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#686868"
+  },
+  "solution-cotton": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#485888"
+  },
+  "solution-consulting": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#b8b8a8"
+  },
+  "solution-armoured-vehicles": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "solution-bulletproof-mirrors": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "solution-security-retrofitting": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "cotton-field": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#485888"
+  },
+  "cotton-harvest": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "insight-textile": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#484848"
+  },
+  "insight-security": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "insight-industrial": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#688888"
+  },
+  "insight-cotton": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#b8b8b8"
+  },
+  "insight-automotive": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#080808"
+  },
+  "insight-machinery": {
+    "width": 1280,
+    "height": 853,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "color": "#988878"
+  },
+  "ceo-portrait": {
+    "width": 800,
+    "height": 1000,
+    "widths": [
+      480,
+      800
+    ],
+    "color": "#181818"
+  }
+}

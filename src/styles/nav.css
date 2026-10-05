@@ -1,0 +1,320 @@
+/* ── Logo (temporary text mark — swap the <Logo> component for the real asset) ── */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.logo__mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid var(--gold);
+  color: var(--light-gold);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  transition: background-color var(--t-fast) var(--ease-out);
+}
+
+.logo__mark::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(185, 154, 91, 0.35);
+}
+
+.logo:hover .logo__mark {
+  background: rgba(185, 154, 91, 0.12);
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo__name {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.logo__group {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--light-gold);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+}
+
+.logo--large .logo__mark {
+  width: 3.4rem;
+  height: 3.4rem;
+  font-size: 1.5rem;
+}
+
+.logo--large .logo__name {
+  font-size: 0.95rem;
+}
+
+.logo--large .logo__group {
+  font-size: 0.7rem;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  height: var(--nav-h);
+  color: var(--cream);
+  transition:
+    height var(--t-med) var(--ease-out),
+    background-color var(--t-med) var(--ease-out),
+    backdrop-filter var(--t-med) var(--ease-out);
+}
+
+.nav::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185, 154, 91, 0.6) 18%, rgba(185, 154, 91, 0.6) 82%, transparent);
+  opacity: 0;
+  transition: opacity var(--t-med) var(--ease-out);
+}
+
+.nav.is-solid {
+  height: 4.25rem;
+  background: rgba(10, 10, 10, 0.92);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  backdrop-filter: blur(14px) saturate(1.1);
+}
+
+.nav.is-solid::after {
+  opacity: 1;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.nav__logo {
+  margin-right: auto;
+}
+
+.nav__links,
+.nav__cta {
+  display: none;
+}
+
+.nav__link {
+  position: relative;
+  padding: 0.6rem 0;
+  color: rgba(244, 240, 232, 0.82);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--t-fast) var(--ease-out);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-med) var(--ease-out);
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+  color: var(--white);
+}
+
+.nav__link:hover::after,
+.nav__link.is-active::after {
+  transform: scaleX(1);
+}
+
+/* Hamburger */
+.nav__toggle {
+  position: relative;
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: -0.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav__toggle-bar {
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  height: 1px;
+  background: currentColor;
+  transition: transform var(--t-med) var(--ease-out);
+}
+
+.nav__toggle-bar:first-child {
+  top: calc(50% - 4px);
+}
+
+.nav__toggle-bar:last-child {
+  top: calc(50% + 4px);
+}
+
+.nav.is-open .nav__toggle-bar:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.nav.is-open .nav__toggle-bar:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+@media (min-width: 1180px) {
+  .nav__links {
+    display: flex;
+    gap: clamp(1.5rem, 2.4vw, 2.5rem);
+  }
+
+  .nav__cta {
+    display: inline-flex;
+    min-height: 2.75rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+}
+
+/* ── Mobile menu ───────────────────────────────────────────────────────────── */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: calc(var(--nav-h) + 1.5rem) var(--gutter) 2.5rem;
+  overflow-y: auto;
+  background: var(--black);
+  color: var(--cream);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1rem);
+  transition:
+    opacity var(--t-med) var(--ease-out),
+    transform var(--t-med) var(--ease-out),
+    visibility 0s linear var(--t-med);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+
+@media (min-width: 1180px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu ul {
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu li,
+.mobile-menu__foot {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition:
+    opacity var(--t-med) var(--ease-out),
+    transform var(--t-med) var(--ease-out);
+}
+
+.mobile-menu.is-open li,
+.mobile-menu.is-open .mobile-menu__foot {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(140ms + var(--i, 0) * 60ms);
+}
+
+.mobile-menu__link {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 9vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  text-decoration: none;
+  transition: color var(--t-fast) var(--ease-out);
+}
+
+.mobile-menu__link:hover,
+.mobile-menu__link.is-active {
+  color: var(--light-gold);
+}
+
+.mobile-menu__index {
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.mobile-menu__foot {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.mobile-menu__cta {
+  width: 100%;
+}
+
+.mobile-menu__contact {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--fg-soft);
+  font-size: 0.95rem;
+}
+
+.mobile-menu__contact a {
+  text-decoration: none;
+}

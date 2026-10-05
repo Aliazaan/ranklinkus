@@ -1,0 +1,187 @@
+/* Division identities. Both sit inside the group's visual language (hairlines, generous
+   space, a restrained accent) but read as different businesses at a glance. */
+
+/* ── Armour Tech: black / steel, technical sans, chamfered corners, HUD brackets ── */
+
+.theme-armour {
+  --black: #07090a;
+  --charcoal: #0f1214;
+  --dark-gray: #1a1e21;
+  --gold: #a4b0b8;
+  --light-gold: #d3dbe0;
+  --gold-ink: #47535b;
+  --font-display: var(--font-sans);
+  --radius: 0;
+}
+
+.theme-armour .tone-light {
+  --bg: #e6e9eb;
+  --fg: #0b0e10;
+  --fg-soft: #3d464c;
+  --fg-faint: #59646b;
+  --line: rgba(11, 14, 16, 0.16);
+}
+
+.theme-armour .section.tone-dark,
+.theme-armour .section.tone-charcoal {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 4.5rem 4.5rem;
+}
+
+.theme-armour .display {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  text-transform: uppercase;
+}
+
+.theme-armour .display em {
+  font-style: normal;
+  color: var(--accent-strong);
+}
+
+.theme-armour .page-hero__title {
+  max-width: 18ch;
+  font-size: clamp(2.2rem, 5.6vw, 5rem);
+}
+
+.theme-armour .feature__title,
+.theme-armour .division__title {
+  font-size: clamp(1.9rem, 3.8vw, 3.3rem);
+}
+
+.theme-armour .sh__title,
+.theme-armour .cta__title,
+.theme-armour .scope-note__title {
+  font-size: clamp(2rem, 4.4vw, 3.8rem);
+}
+
+.theme-armour .steps__title {
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+}
+
+.theme-armour .cta__title {
+  max-width: 18ch;
+}
+
+.theme-armour .btn {
+  letter-spacing: 0.22em;
+}
+
+.theme-armour .page-hero__veil {
+  background:
+    linear-gradient(90deg, rgba(7, 9, 10, 0.82) 0%, rgba(7, 9, 10, 0.42) 70%, rgba(7, 9, 10, 0.3) 100%),
+    linear-gradient(180deg, rgba(7, 9, 10, 0.7) 0%, rgba(7, 9, 10, 0.3) 38%, rgba(7, 9, 10, 0.95) 100%);
+}
+
+.theme-armour .page-hero__img {
+  filter: grayscale(0.25) contrast(1.05);
+}
+
+/* HUD brackets frame the hero and every image. */
+.theme-armour .page-hero__media::after,
+.theme-armour .feature__media::after,
+.theme-armour .division__media::after {
+  content: '';
+  position: absolute;
+  inset: clamp(1rem, 2.4vw, 2rem);
+  z-index: 1;
+  border: 0;
+  color: rgba(211, 219, 224, 0.55);
+  background: var(--hud);
+  pointer-events: none;
+}
+
+/* Keep the hero brackets clear of the fixed header. */
+.theme-armour .page-hero__media::after {
+  top: calc(var(--nav-h) + 0.75rem);
+}
+
+.theme-armour .feature__index,
+.theme-armour .division__index {
+  left: clamp(2.25rem, 4vw, 3rem);
+  bottom: clamp(2.25rem, 4vw, 3rem);
+  top: auto;
+}
+
+.theme-armour .feature__media,
+.theme-armour .division__media {
+  clip-path: polygon(0 0, calc(100% - 2.25rem) 0, 100% 2.25rem, 100% 100%, 0 100%);
+}
+
+.theme-armour .feature__index,
+.theme-armour .division__index {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--light-gold);
+  -webkit-text-stroke: 0;
+}
+
+.theme-armour .feature__index::before,
+.theme-armour .division__index::before {
+  content: 'AAT / ';
+  color: var(--steel);
+}
+
+.theme-armour .feature__list li::before {
+  width: 0.45rem;
+  height: 0.45rem;
+  top: 1.5rem;
+  background: var(--accent);
+}
+
+.theme-armour .steps__index,
+.theme-armour .eyebrow {
+  letter-spacing: 0.3em;
+}
+
+.theme-armour .steps__dot {
+  transform: none;
+}
+
+.theme-armour .steps__item {
+  padding-bottom: 0.5rem;
+}
+
+.theme-armour .scope-note__panel {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.theme-armour .scope-note__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0.75rem;
+  color: rgba(211, 219, 224, 0.5);
+  background: var(--hud);
+  pointer-events: none;
+}
+
+.theme-armour .division__list-index {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Dada Sons: warm ivory, serif, a woven thread texture ──────────────────── */
+
+.theme-dada .tone-ivory {
+  --bg: #ebe3d1;
+}
+
+.theme-dada .help,
+.theme-dada .page-hero__veil::after {
+  background-image: repeating-linear-gradient(90deg, rgba(244, 240, 232, 0.03) 0 1px, transparent 1px 7px);
+}
+
+.theme-dada .page-hero__veil::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.theme-dada .feature__media::after {
+  inset: 0.9rem;
+  border-color: rgba(244, 240, 232, 0.35);
+}

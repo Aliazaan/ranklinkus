@@ -1,0 +1,96 @@
+/* Design tokens. Gold is an accent, never a fill. Components read the semantic
+   variables (--bg, --fg, --accent …) that each .tone-* class sets, so every section
+   re-themes itself without per-component overrides. */
+
+:root {
+  --black: #0a0a0a;
+  --charcoal: #151515;
+  --dark-gray: #202020;
+  --cream: #f4f0e8;
+  --ivory: #ebe4d4;
+  --white: #ffffff;
+  --gold: #b99a5b;
+  --light-gold: #d6be86;
+  --gold-ink: #7c6431; /* gold dark enough for text on cream (≥ 4.5:1) */
+  --muted-gray: #8d8d8d;
+  --steel: #a4b0b8;
+
+  --font-display: 'Cormorant Garamond Variable', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Manrope Variable', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --container: 80rem;
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --section-y: clamp(5rem, 11vw, 10rem);
+  --nav-h: 5rem;
+  --radius: 2px;
+
+  --ease-out: cubic-bezier(0.22, 0.8, 0.24, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 300ms;
+  --t-med: 500ms;
+  --t-slow: 800ms;
+
+  /* Fine corner brackets (used by the Armour Tech identity). Colour comes from `color`. */
+  --hud-size: 1.4rem;
+  --hud:
+    linear-gradient(currentColor, currentColor) top left / var(--hud-size) 1px no-repeat,
+    linear-gradient(currentColor, currentColor) top left / 1px var(--hud-size) no-repeat,
+    linear-gradient(currentColor, currentColor) top right / var(--hud-size) 1px no-repeat,
+    linear-gradient(currentColor, currentColor) top right / 1px var(--hud-size) no-repeat,
+    linear-gradient(currentColor, currentColor) bottom left / var(--hud-size) 1px no-repeat,
+    linear-gradient(currentColor, currentColor) bottom left / 1px var(--hud-size) no-repeat,
+    linear-gradient(currentColor, currentColor) bottom right / var(--hud-size) 1px no-repeat,
+    linear-gradient(currentColor, currentColor) bottom right / 1px var(--hud-size) no-repeat;
+
+  /* Default tone is dark. */
+  --bg: var(--black);
+  --fg: var(--cream);
+  --fg-soft: rgba(244, 240, 232, 0.76);
+  --fg-faint: rgba(244, 240, 232, 0.58);
+  --line: rgba(244, 240, 232, 0.14);
+  --accent: var(--gold);
+  --accent-strong: var(--light-gold);
+}
+
+.tone-dark {
+  --bg: var(--black);
+  --fg: var(--cream);
+  --fg-soft: rgba(244, 240, 232, 0.76);
+  --fg-faint: rgba(244, 240, 232, 0.58);
+  --line: rgba(244, 240, 232, 0.14);
+  --accent: var(--gold);
+  --accent-strong: var(--light-gold);
+}
+
+.tone-charcoal {
+  --bg: var(--charcoal);
+  --fg: var(--cream);
+  --fg-soft: rgba(244, 240, 232, 0.76);
+  --fg-faint: rgba(244, 240, 232, 0.58);
+  --line: rgba(244, 240, 232, 0.14);
+  --accent: var(--gold);
+  --accent-strong: var(--light-gold);
+}
+
+.tone-light,
+.tone-white,
+.tone-ivory {
+  --fg: var(--black);
+  --fg-soft: #46423b;
+  --fg-faint: #6a655b;
+  --line: rgba(10, 10, 10, 0.14);
+  --accent: var(--gold-ink);
+  --accent-strong: var(--gold-ink);
+}
+
+.tone-light {
+  --bg: var(--cream);
+}
+
+.tone-white {
+  --bg: var(--white);
+}
+
+.tone-ivory {
+  --bg: var(--ivory);
+}
