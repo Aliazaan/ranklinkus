@@ -1,0 +1,37 @@
+# Dada Sons Group — settings for Apache / cPanel shared hosting.
+# Other servers (Netlify, Cloudflare Pages, GitHub Pages, Nginx) ignore this file.
+# If your host shows a "500 Internal Server Error" after upload, delete this file; the site works without it.
+
+ErrorDocument 404 /404.html
+
+# Compress text assets.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/xml image/svg+xml text/plain application/manifest+json
+</IfModule>
+
+# Make sure modern formats are served with the right type.
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType text/javascript .js
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# Cache. Files in /assets have content hashes in their names, so they can be cached for a year.
+# Images keep their names, so they are cached for a month: replace a photo and returning visitors see it soon.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
