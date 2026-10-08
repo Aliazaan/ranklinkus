@@ -8,16 +8,6 @@
     ],
     "color": "#080808"
   },
-  "hero-textile-machinery-portrait": {
-    "width": 1100,
-    "height": 1375,
-    "widths": [
-      480,
-      800,
-      1100
-    ],
-    "color": "#080808"
-  },
   "hero-dada-sons": {
     "width": 2400,
     "height": 1350,
@@ -28,17 +18,6 @@
       2400
     ],
     "color": "#888878"
-  },
-  "hero-armour-tech": {
-    "width": 2400,
-    "height": 1350,
-    "widths": [
-      768,
-      1280,
-      1920,
-      2400
-    ],
-    "color": "#080808"
   },
   "hero-about": {
     "width": 1920,
@@ -327,6 +306,209 @@
       480,
       800,
       1100
+    ],
+    "color": "#080808"
+  },
+  "hero-slide-machinery": {
+    "width": 2400,
+    "height": 1350,
+    "widths": [
+      768,
+      1280,
+      1920,
+      2400
+    ],
+    "color": "#080808"
+  },
+  "hero-slide-machinery-portrait": {
+    "width": 1100,
+    "height": 1375,
+    "widths": [
+      480,
+      800,
+      1100
+    ],
+    "color": "#f8f8e8"
+  },
+  "hero-slide-vehicle": {
+    "width": 2400,
+    "height": 1350,
+    "widths": [
+      768,
+      1280,
+      1920,
+      2400
+    ],
+    "color": "#080808"
+  },
+  "hero-slide-vehicle-portrait": {
+    "width": 1100,
+    "height": 1375,
+    "widths": [
+      480,
+      800,
+      1100
+    ],
+    "color": "#080808"
+  },
+  "hero-slide-looms": {
+    "width": 2400,
+    "height": 1350,
+    "widths": [
+      768,
+      1280,
+      1920,
+      2400
+    ],
+    "color": "#080808"
+  },
+  "hero-slide-looms-portrait": {
+    "width": 1100,
+    "height": 1375,
+    "widths": [
+      480,
+      800,
+      1100
+    ],
+    "color": "#080808"
+  },
+  "gal-looms": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-white-threads": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#c8b8a8"
+  },
+  "gal-mill-interior": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-knitting": {
+    "width": 1400,
+    "height": 934,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#a8a898"
+  },
+  "gal-gears": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-weaving-hall": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-bobbins": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#888878"
+  },
+  "gal-suv-studio": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-headlamp": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-door-detail": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-matte-black": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-armoured-front": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#f8f8e8"
+  },
+  "gal-armoured-workshop": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
+    ],
+    "color": "#080808"
+  },
+  "gal-night-lamps": {
+    "width": 1400,
+    "height": 933,
+    "widths": [
+      640,
+      1000,
+      1400
     ],
     "color": "#080808"
   }

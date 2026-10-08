@@ -7,6 +7,8 @@ interface PictureProps {
   sizes?: string
   /** Above-the-fold imagery: loads eagerly with high fetch priority. */
   priority?: boolean
+  /** Off-screen-in-time imagery (e.g. later hero slides): fetched after everything else. */
+  lowPriority?: boolean
   /** Optional alternative crop shown at narrow widths (e.g. a portrait hero). */
   mobile?: ImageName
   mobileMedia?: string
@@ -23,6 +25,7 @@ export function Picture({
   alt,
   sizes = '100vw',
   priority = false,
+  lowPriority = false,
   mobile,
   mobileMedia = '(max-width: 767px)',
   className,
@@ -44,7 +47,7 @@ export function Picture({
         alt={alt}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
-        fetchPriority={priority ? 'high' : 'auto'}
+        fetchPriority={priority ? 'high' : lowPriority ? 'low' : 'auto'}
         style={{ backgroundColor: meta.color }}
       />
     </picture>

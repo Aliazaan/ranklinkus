@@ -185,3 +185,20 @@
   inset: 0.9rem;
   border-color: rgba(244, 240, 232, 0.35);
 }
+
+/* Armour Tech galleries: chamfered tiles and steel captions. */
+.theme-armour .gallery__item {
+  clip-path: polygon(0 0, calc(100% - 1.5rem) 0, 100% 1.5rem, 100% 100%, 0 100%);
+}
+
+.theme-armour .gallery figcaption {
+  letter-spacing: 0.26em;
+}
+
+.theme-armour .gallery figcaption::before {
+  background: var(--steel);
+}
+
+.theme-armour .gallery__img {
+  filter: grayscale(0.2) contrast(1.05);
+}

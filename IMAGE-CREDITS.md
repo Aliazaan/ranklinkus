@@ -35,6 +35,11 @@ as it becomes available (see "Replacing images" in the README).
 | 6717035 | Machinery insight |
 | 10328901 | Insights hero |
 | 13010607 | Automotive insight |
+| 8246481 | Home hero slide 1 (spinning hall) |
+| 19067088 | Home hero slide 2, Armour Tech hero, vehicle gallery |
+| 16472162 | Home hero slide 3, textile gallery (looms) |
+| 32655890, 16176408, 36327501, 31742337, 18293962, 8246486 | Textile machinery gallery |
+| 9330752, 16255324, 28571809, 29787615, 10981370, 35493424 | Vehicle protection gallery (plate in 35493424 blurred) |
 
 Photos of vehicles are generic stock images. They are **not** photographs of Armour Tech's work and the site does not
 claim that they are; alt text describes only what is visible.

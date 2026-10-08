@@ -1,18 +1,21 @@
 import { BusinessCard } from '../components/BusinessCard'
 import { CapabilityCard } from '../components/CapabilityCard'
 import { CTASection } from '../components/CTASection'
+import { GalleryTabs } from '../components/Gallery'
 import { Hero } from '../components/Hero'
 import { IndustryCard } from '../components/IndustryCard'
 import { InsightCard } from '../components/InsightCard'
 import { Leadership } from '../components/Leadership'
 import { ProcessSteps } from '../components/ProcessSteps'
 import { ScrollReveal } from '../components/ScrollReveal'
+import { Ticker } from '../components/Ticker'
 import { Section } from '../components/Section'
 import { SectionHeading } from '../components/SectionHeading'
 import { TextLink } from '../components/Button'
 import { site } from '../config/site'
 import { businesses } from '../data/businesses'
 import { capabilities } from '../data/capabilities'
+import { machineryGallery, protectionGallery } from '../data/gallery'
 import { industries } from '../data/industries'
 import { articles } from '../data/insights'
 import { principles, processSteps } from '../data/process'
@@ -65,6 +68,8 @@ export default function Home() {
         </div>
       </Section>
 
+      <Ticker />
+
       <Section tone="white" id="capabilities" labelledBy="capabilities-title" className="capabilities">
         <SectionHeading eyebrow="Our Capabilities" id="capabilities-title" title={<>What the group <em>does.</em></>} intro="Six capabilities across two divisions: three in industrial sourcing and advisory, three in vehicle protection and security." />
         <div className="capabilities__grid">
@@ -74,6 +79,16 @@ export default function Home() {
             </ScrollReveal>
           ))}
         </div>
+      </Section>
+
+      <Section tone="charcoal" id="gallery" labelledBy="gallery-title" grain className="home-gallery">
+        <SectionHeading eyebrow="Inside the industry" id="gallery-title" title={<>The machinery and the <em>vehicles.</em></>} intro="Illustrative photography of the equipment and vehicles in our two fields. Real project images will be added as they are confirmed." />
+        <GalleryTabs
+          groups={[
+            { id: 'machinery', label: 'Textile machinery', items: machineryGallery },
+            { id: 'protection', label: 'Vehicle protection', items: protectionGallery },
+          ]}
+        />
       </Section>
 
       <Section tone="light" id="industries" labelledBy="industries-title" className="industries">

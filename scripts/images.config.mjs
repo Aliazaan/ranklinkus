@@ -17,6 +17,7 @@ const WIDE = [768, 1280, 1920]
 const HERO = [768, 1280, 1920, 2400]
 const CARD = [640, 960, 1280]
 const TILE = [480, 768, 1024]
+const GAL = [640, 1000, 1400]
 
 // Plate on the black G-Class (pexels 16717543)
 const G_CLASS_PLATE = [0.54, 0.578, 0.26, 0.06]
@@ -26,9 +27,7 @@ const SUV_PLATE = [0.72, 0.595, 0.115, 0.075]
 export const images = [
   // ── Heroes ────────────────────────────────────────────────────────────────
   { name: 'hero-textile-machinery', source: 'pexels:36327497', ratio: [16, 9], focus: [0.5, 0.44], widths: HERO },
-  { name: 'hero-textile-machinery-portrait', source: 'pexels:36327497', ratio: [4, 5], focus: [0.5, 0.44], widths: [480, 800, 1100] },
   { name: 'hero-dada-sons', source: 'pexels:8246482', ratio: [16, 9], focus: [0.45, 0.5], widths: HERO },
-  { name: 'hero-armour-tech', source: 'pexels:16717543', ratio: [16, 9], focus: [0.5, 0.47], widths: HERO, redact: [G_CLASS_PLATE] },
   { name: 'hero-about', source: 'pexels:38357014', ratio: [16, 9], focus: [0.4, 0.5], widths: WIDE },
   { name: 'hero-industries', source: 'pexels:29976478', ratio: [16, 9], focus: [0.5, 0.55], widths: WIDE },
   { name: 'hero-solutions', source: 'pexels:36327502', ratio: [16, 9], focus: [0.5, 0.5], widths: WIDE },
@@ -36,6 +35,32 @@ export const images = [
   { name: 'hero-insights', source: 'pexels:10328901', ratio: [16, 9], focus: [0.5, 0.5], widths: WIDE },
   { name: 'hero-contact', source: 'pexels:29198153', ratio: [16, 9], focus: [0.55, 0.55], widths: WIDE },
   { name: 'cta-background', source: 'pexels:8973680', ratio: [16, 9], focus: [0.55, 0.55], widths: WIDE },
+
+  // ── Hero slideshow (home) and Armour Tech hero ────────────────────────────
+  { name: 'hero-slide-machinery', source: 'pexels:8246481', ratio: [16, 9], focus: [0.5, 0.5], widths: HERO },
+  { name: 'hero-slide-machinery-portrait', source: 'pexels:8246481', ratio: [4, 5], focus: [0.5, 0.5], widths: [480, 800, 1100] },
+  { name: 'hero-slide-vehicle', source: 'pexels:19067088', ratio: [16, 9], focus: [0.35, 0.55], widths: HERO },
+  { name: 'hero-slide-vehicle-portrait', source: 'pexels:19067088', ratio: [4, 5], focus: [0.3, 0.55], widths: [480, 800, 1100] },
+  { name: 'hero-slide-looms', source: 'pexels:16472162', ratio: [16, 9], focus: [0.5, 0.5], widths: HERO },
+  { name: 'hero-slide-looms-portrait', source: 'pexels:16472162', ratio: [4, 5], focus: [0.45, 0.5], widths: [480, 800, 1100] },
+
+  // ── Gallery: textile machinery (illustrative stock) ───────────────────────
+  { name: 'gal-looms', source: 'pexels:16472162', ratio: [3, 2], focus: [0.45, 0.5], widths: GAL },
+  { name: 'gal-white-threads', source: 'pexels:32655890', ratio: [3, 2], focus: [0.5, 0.5], widths: GAL },
+  { name: 'gal-mill-interior', source: 'pexels:16176408', ratio: [3, 2], focus: [0.4, 0.5], widths: GAL },
+  { name: 'gal-knitting', source: 'pexels:36327501', ratio: [3, 2], focus: [0.5, 0.5], widths: GAL },
+  { name: 'gal-gears', source: 'pexels:31742337', ratio: [3, 2], focus: [0.5, 0.5], widths: GAL },
+  { name: 'gal-weaving-hall', source: 'pexels:18293962', ratio: [3, 2], focus: [0.5, 0.5], widths: GAL },
+  { name: 'gal-bobbins', source: 'pexels:8246486', ratio: [3, 2], focus: [0.4, 0.5], widths: GAL },
+
+  // ── Gallery: vehicle protection (illustrative stock) ──────────────────────
+  { name: 'gal-suv-studio', source: 'pexels:19067088', ratio: [3, 2], focus: [0.4, 0.5], widths: GAL },
+  { name: 'gal-headlamp', source: 'pexels:9330752', ratio: [3, 2], focus: [0.6, 0.5], widths: GAL },
+  { name: 'gal-door-detail', source: 'pexels:16255324', ratio: [3, 2], focus: [0.5, 0.5], widths: GAL },
+  { name: 'gal-matte-black', source: 'pexels:28571809', ratio: [3, 2], focus: [0.5, 0.5], widths: GAL },
+  { name: 'gal-armoured-front', source: 'pexels:29787615', ratio: [3, 2], focus: [0.5, 0.5], widths: GAL },
+  { name: 'gal-armoured-workshop', source: 'pexels:10981370', ratio: [3, 2], focus: [0.4, 0.55], widths: GAL },
+  { name: 'gal-night-lamps', source: 'pexels:35493424', ratio: [3, 2], focus: [0.5, 0.45], widths: GAL, redact: [[0.86, 0.8, 0.14, 0.2]] },
 
   // ── Business division cards ───────────────────────────────────────────────
   { name: 'business-dada-sons', source: 'pexels:38357014', ratio: [4, 5], focus: [0.35, 0.56], widths: CARD },

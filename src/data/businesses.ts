@@ -42,7 +42,7 @@ export const businesses: Business[] = [
       "Armour Tech (AAT) is the group's security-focused division, covering armoured vehicles, bulletproof mirrors and the retrofitting of security equipment, scoped around each client's requirement.",
     capabilities: ['Armoured Vehicles', 'Bulletproof Mirrors', 'Security Retrofitting'],
     cardImage: 'business-armour-tech',
-    heroImage: 'hero-armour-tech',
+    heroImage: 'hero-slide-vehicle',
     cta: 'Explore Armour Tech',
   },
 ]

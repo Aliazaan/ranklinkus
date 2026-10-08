@@ -1,12 +1,14 @@
 import { ButtonLink } from '../components/Button'
 import { CTASection } from '../components/CTASection'
 import { FeatureSplit } from '../components/FeatureSplit'
+import { GallerySection } from '../components/GallerySection'
 import { PageHero } from '../components/PageHero'
 import { ProcessSteps } from '../components/ProcessSteps'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { Section } from '../components/Section'
 import { SectionHeading } from '../components/SectionHeading'
 import { contactPath } from '../data/areas'
+import { protectionGallery } from '../data/gallery'
 import { getBusiness } from '../data/businesses'
 import { armourApproach } from '../data/process'
 import { getSolutionsByDivision } from '../data/solutions'
@@ -35,7 +37,7 @@ export default function ArmourTech() {
         eyebrow="Armour Tech · AAT"
         title="Protection engineered around your requirements."
         subtitle="Specialized solutions for armoured mobility, ballistic protection and security equipment retrofitting."
-        image="hero-armour-tech"
+        image="hero-slide-vehicle"
         crumbs={crumbs}
         actions={
           <>
@@ -59,7 +61,9 @@ export default function ArmourTech() {
         <p>Details such as application, fitting and specification are written down and agreed before anything is supplied.</p>
       </FeatureSplit>
 
-      <FeatureSplit id="security-retrofitting" tone="charcoal" eyebrow="03 · Security equipment retrofitting" title="Security Equipment Retrofitting" index="03" image="solution-security-retrofitting" imageAlt={retrofitting.imageAlt} list={retrofitting.includes} listLabel="Retrofitting services" actions={<ButtonLink to={contactPath(retrofitting.area)} variant="light" arrow>Enquire about retrofitting</ButtonLink>}>
+      <GallerySection id="protection-gallery" tone="charcoal" eyebrow="Ballistic protection" title="Vehicles and protection, in detail." items={protectionGallery} label="Vehicle protection photography" />
+
+      <FeatureSplit id="security-retrofitting" tone="dark" eyebrow="03 · Security equipment retrofitting" title="Security Equipment Retrofitting" index="03" image="solution-security-retrofitting" imageAlt={retrofitting.imageAlt} list={retrofitting.includes} listLabel="Retrofitting services" actions={<ButtonLink to={contactPath(retrofitting.area)} variant="light" arrow>Enquire about retrofitting</ButtonLink>}>
         <p>{retrofitting.overview}</p>
         <p>Careful planning up front keeps the installation consistent with how the asset is actually used.</p>
       </FeatureSplit>
@@ -86,7 +90,7 @@ export default function ArmourTech() {
         title="Discuss your protection requirement."
         text="Tell us about the vehicle or asset and what it needs to achieve. We will start with questions."
         cta={{ label: 'Start a conversation', to: contactPath('armoured-vehicles') }}
-        image="hero-armour-tech"
+        image="hero-slide-vehicle"
       />
     </div>
   )

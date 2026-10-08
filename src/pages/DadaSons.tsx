@@ -1,12 +1,14 @@
 import { ButtonLink } from '../components/Button'
 import { CTASection } from '../components/CTASection'
 import { FeatureSplit } from '../components/FeatureSplit'
+import { GallerySection } from '../components/GallerySection'
 import { PageHero } from '../components/PageHero'
 import { ProcessSteps } from '../components/ProcessSteps'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { Section } from '../components/Section'
 import { SectionHeading } from '../components/SectionHeading'
 import { contactPath } from '../data/areas'
+import { machineryGallery } from '../data/gallery'
 import { processSteps } from '../data/process'
 import { getBusiness } from '../data/businesses'
 import { getSolutionsByDivision } from '../data/solutions'
@@ -63,7 +65,9 @@ export default function DadaSons() {
         <p>Whether the requirement is a single machine or a wider equipment programme, we start by understanding what the client needs it to do.</p>
       </FeatureSplit>
 
-      <FeatureSplit id="cotton-commodities" tone="dark" flip eyebrow="02 · Cotton & commodities" title="Cotton & Commodities" index="02" image="cotton-field" imageAlt={cotton.imageAlt} list={cotton.includes} listLabel="Cotton sourcing services" className="feature--grain" actions={<ButtonLink to={contactPath(cotton.area)} variant="light" arrow>Enquire about cotton</ButtonLink>}>
+      <GallerySection id="machinery-gallery" tone="dark" eyebrow="Machinery" title={<>Textile machinery, <em>up close.</em></>} items={machineryGallery} label="Textile machinery photography" />
+
+      <FeatureSplit id="cotton-commodities" tone="light" flip eyebrow="02 · Cotton & commodities" title="Cotton & Commodities" index="02" image="cotton-field" imageAlt={cotton.imageAlt} list={cotton.includes} listLabel="Cotton sourcing services" actions={<ButtonLink to={contactPath(cotton.area)} variant="light" arrow>Enquire about cotton</ButtonLink>}>
         <p>{cotton.overview}</p>
         <p>Clear specifications and steady communication matter as much as price, so we put both in writing early.</p>
       </FeatureSplit>
