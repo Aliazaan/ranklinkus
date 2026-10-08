@@ -300,14 +300,13 @@
     "color": "#988878"
   },
   "ceo-portrait": {
-    "width": 1100,
-    "height": 1375,
+    "width": 800,
+    "height": 1000,
     "widths": [
       480,
-      800,
-      1100
+      800
     ],
-    "color": "#080808"
+    "color": "#181818"
   },
   "hero-slide-machinery": {
     "width": 2400,

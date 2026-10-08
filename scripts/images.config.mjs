@@ -94,7 +94,7 @@ export const images = [
   { name: 'insight-machinery', source: 'pexels:6717035', ratio: [3, 2], focus: [0.5, 0.5], widths: CARD },
 
   // ── Leadership (real client asset) ───────────────────────────────────────
-  { name: 'ceo-portrait', source: 'client:ceo-muhammad-asif-bhati.jpg', ratio: [4, 5], focus: [0.5, 0.36], widths: [480, 800, 1100], grade: false },
+  { name: 'ceo-portrait', source: 'client:ceo-muhammad-asif-bhati.jpg', ratio: [4, 5], focus: [0.56, 0.36], widths: [480, 800, 1100], grade: false },
 ]
 
 export const pexelsWidth = 2400
