@@ -22,6 +22,7 @@ export const routeEntries: RouteEntry[] = [
   page('/businesses', 0.9),
   page('/businesses/dada-sons', 0.9),
   page('/businesses/armour-tech', 0.9),
+  page('/machines', 0.9),
   page('/industries', 0.7),
   page('/solutions', 0.8),
   page('/projects', 0.5),

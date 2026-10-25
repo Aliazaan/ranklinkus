@@ -501,7 +501,7 @@
   gap: 1rem;
 }
 
-/* ── Hero slideshow: three slides crossfade over 21 s (pure CSS) ───────────── */
+/* ── Hero slideshow: two slides crossfade over 14 s (pure CSS) ───────────── */
 
 .hero__slide {
   position: absolute;
@@ -511,23 +511,19 @@
 
 .hero__slide--1 {
   opacity: 1;
-  animation: hero-s1 21s linear infinite;
+  animation: hero-s1 14s linear infinite;
 }
 
 .hero__slide--2 {
-  animation: hero-s2 21s linear infinite;
-}
-
-.hero__slide--3 {
-  animation: hero-s3 21s linear infinite;
+  animation: hero-s2 14s linear infinite;
 }
 
 @keyframes hero-s1 {
   0%,
-  30% {
+  44% {
     opacity: 1;
   }
-  36%,
+  50%,
   94% {
     opacity: 0;
   }
@@ -538,25 +534,10 @@
 
 @keyframes hero-s2 {
   0%,
-  30% {
+  44% {
     opacity: 0;
   }
-  36%,
-  64% {
-    opacity: 1;
-  }
-  70%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes hero-s3 {
-  0%,
-  63% {
-    opacity: 0;
-  }
-  69%,
+  50%,
   94% {
     opacity: 1;
   }
@@ -595,13 +576,9 @@
 
 .hero__dots li:nth-child(1)::after {
   opacity: 1;
-  animation: hero-s1 21s linear infinite;
+  animation: hero-s1 14s linear infinite;
 }
 
 .hero__dots li:nth-child(2)::after {
-  animation: hero-s2 21s linear infinite;
-}
-
-.hero__dots li:nth-child(3)::after {
-  animation: hero-s3 21s linear infinite;
+  animation: hero-s2 14s linear infinite;
 }

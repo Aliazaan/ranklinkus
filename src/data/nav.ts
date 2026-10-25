@@ -8,6 +8,7 @@ export interface NavItem {
 export const primaryNav: NavItem[] = [
   { label: 'About', to: '/about' },
   { label: 'Businesses', to: '/businesses' },
+  { label: 'Machines', to: '/machines' },
   { label: 'Industries', to: '/industries' },
   { label: 'Solutions', to: '/solutions' },
   { label: 'Projects', to: '/projects' },
@@ -29,6 +30,7 @@ export const footerNav = {
   ] satisfies NavItem[],
   businesses: [
     { label: 'Dada Sons', to: '/businesses/dada-sons' },
+    { label: 'New & used machines', to: '/machines' },
     { label: 'Armour Tech', to: '/businesses/armour-tech' },
   ] satisfies NavItem[],
   solutions: [

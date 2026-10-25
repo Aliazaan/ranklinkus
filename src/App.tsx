@@ -13,6 +13,7 @@ import Home from './pages/Home'
 import Industries from './pages/Industries'
 import InsightArticle from './pages/InsightArticle'
 import Insights from './pages/Insights'
+import Machines from './pages/Machines'
 import NotFound from './pages/NotFound'
 import Projects from './pages/Projects'
 import Solutions from './pages/Solutions'
@@ -34,6 +35,7 @@ export default function App() {
             <Route path="/businesses/dada-sons" element={<DadaSons />} />
             <Route path="/businesses/armour-tech" element={<ArmourTech />} />
             <Route path="/industries" element={<Industries />} />
+            <Route path="/machines" element={<Machines />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/insights" element={<Insights />} />

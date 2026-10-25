@@ -21,7 +21,7 @@ Requires Node 20+.
 ## Routes
 
 `/` · `/about` · `/businesses` · `/businesses/dada-sons` · `/businesses/armour-tech` · `/industries` · `/solutions` ·
-`/projects` · `/insights` · `/insights/:slug` · `/contact` · `404`
+`/machines` · `/projects` · `/insights` · `/insights/:slug` · `/contact` · `/cortexley` · `404`
 
 `npm run build` writes one `index.html` per route (e.g. `dist/about/index.html`), plus `404.html`, `sitemap.xml` and
 `robots.txt`. Deploy the `dist/` folder to any static host (GitHub Pages, Netlify, Cloudflare Pages, Vercel, S3 +
@@ -58,6 +58,11 @@ Armour Tech's AAT logo can be added to `src/pages/ArmourTech.tsx` once supplied.
    `public/images` and refreshes `src/data/image-manifest.json` (which gives every image its intrinsic size, so
    there is no layout shift). `npm run images -- name-a name-b` regenerates only the named entries.
 4. Update the `alt` text where the image is used.
+
+### Machines page
+`/machines` has a **New machines** and a **Used machines** section. Machines live in `src/data/machines.ts`, in
+sequence; each has a `condition` (`'new'` or `'used'`) that decides its section, so changing one word moves it. Photos
+sit in `assets-src/machines/` and are registered in `scripts/images.config.mjs` (`machine-*`, no colour grade).
 
 See `IMAGE-CREDITS.md` for the current placeholder sources.
 

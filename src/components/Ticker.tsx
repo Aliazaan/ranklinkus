@@ -1,4 +1,4 @@
-const WORDS = ['Textile Machinery', 'Cotton & Commodities', 'Consulting & Advisory', 'Armoured Vehicles', 'Ballistic Protection', 'Security Retrofitting']
+const WORDS = ['Textile Machinery', 'New Machines', 'Used Machines', 'Cotton & Commodities', 'Consulting & Advisory']
 
 /** Slow typographic ticker. Decorative: the same words appear in the capabilities section. */
 export function Ticker() {

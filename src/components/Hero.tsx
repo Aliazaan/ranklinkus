@@ -3,11 +3,10 @@ import { Picture } from './Picture'
 
 const SLIDES = [
   { name: 'hero-slide-machinery', mobile: 'hero-slide-machinery-portrait' },
-  { name: 'hero-slide-vehicle', mobile: 'hero-slide-vehicle-portrait' },
   { name: 'hero-slide-looms', mobile: 'hero-slide-looms-portrait' },
 ] as const
 
-const FACTS = ['Textile Machinery', 'Cotton & Commodities', 'Consulting', 'Armoured Vehicles', 'Security Retrofitting']
+const FACTS = ['Textile Machinery', 'New Machines', 'Used Machines', 'Cotton & Commodities', 'Consulting']
 
 export function Hero() {
   return (
@@ -49,7 +48,6 @@ export function Hero() {
       <div className="hero__foot">
         <div className="container hero__foot-inner">
           <ol className="hero__dots" aria-hidden="true">
-            <li />
             <li />
             <li />
           </ol>

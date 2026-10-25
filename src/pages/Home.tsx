@@ -1,7 +1,7 @@
 import { BusinessCard } from '../components/BusinessCard'
 import { CapabilityCard } from '../components/CapabilityCard'
 import { CTASection } from '../components/CTASection'
-import { GalleryTabs } from '../components/Gallery'
+import { Gallery } from '../components/Gallery'
 import { Hero } from '../components/Hero'
 import { IndustryCard } from '../components/IndustryCard'
 import { InsightCard } from '../components/InsightCard'
@@ -15,7 +15,7 @@ import { TextLink } from '../components/Button'
 import { site } from '../config/site'
 import { businesses } from '../data/businesses'
 import { capabilities } from '../data/capabilities'
-import { machineryGallery, protectionGallery } from '../data/gallery'
+import { machineryGallery } from '../data/gallery'
 import { industries } from '../data/industries'
 import { articles } from '../data/insights'
 import { principles, processSteps } from '../data/process'
@@ -82,13 +82,8 @@ export default function Home() {
       </Section>
 
       <Section tone="charcoal" id="gallery" labelledBy="gallery-title" grain className="home-gallery">
-        <SectionHeading eyebrow="Inside the industry" id="gallery-title" title={<>The machinery and the <em>vehicles.</em></>} intro="Illustrative photography of the equipment and vehicles in our two fields. Real project images will be added as they are confirmed." />
-        <GalleryTabs
-          groups={[
-            { id: 'machinery', label: 'Textile machinery', items: machineryGallery },
-            { id: 'protection', label: 'Vehicle protection', items: protectionGallery },
-          ]}
-        />
+        <SectionHeading eyebrow="Inside the industry" id="gallery-title" title={<>The machinery behind <em>the cloth.</em></>} intro="Illustrative photography of textile machinery. Real project images will be added as they are confirmed." />
+        <Gallery items={machineryGallery} label="Textile machinery photography" />
       </Section>
 
       <Section tone="light" id="industries" labelledBy="industries-title" className="industries">

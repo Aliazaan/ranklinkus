@@ -40,7 +40,6 @@ export const images = [
   { name: 'hero-slide-machinery', source: 'pexels:8246481', ratio: [16, 9], focus: [0.5, 0.5], widths: HERO },
   { name: 'hero-slide-machinery-portrait', source: 'pexels:8246481', ratio: [4, 5], focus: [0.5, 0.5], widths: [480, 800, 1100] },
   { name: 'hero-slide-vehicle', source: 'pexels:19067088', ratio: [16, 9], focus: [0.35, 0.55], widths: HERO },
-  { name: 'hero-slide-vehicle-portrait', source: 'pexels:19067088', ratio: [4, 5], focus: [0.3, 0.55], widths: [480, 800, 1100] },
   { name: 'hero-slide-looms', source: 'pexels:16472162', ratio: [16, 9], focus: [0.5, 0.5], widths: HERO },
   { name: 'hero-slide-looms-portrait', source: 'pexels:16472162', ratio: [4, 5], focus: [0.45, 0.5], widths: [480, 800, 1100] },
 
@@ -92,6 +91,23 @@ export const images = [
   { name: 'insight-cotton', source: 'pexels:10287684', ratio: [3, 2], focus: [0.5, 0.6], widths: CARD, saturation: 0.55 },
   { name: 'insight-automotive', source: 'pexels:13010607', ratio: [3, 2], focus: [0.6, 0.5], widths: CARD },
   { name: 'insight-machinery', source: 'pexels:6717035', ratio: [3, 2], focus: [0.5, 0.5], widths: CARD },
+
+  // ── Machines page (real photographs supplied by Dada Sons; no colour grade so machines look as they are) ──
+  { name: 'machine-dk803-1', source: 'client:machines/dk803-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 1024, 1280], grade: false },
+  { name: 'machine-dk803-2', source: 'client:machines/dk803-2.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 960], grade: false },
+  { name: 'machine-tc03-1', source: 'client:machines/tc03-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 1024], grade: false },
+  { name: 'machine-dk903-1', source: 'client:machines/dk903-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 800], grade: false },
+  { name: 'machine-td-1', source: 'client:machines/td-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 750], grade: false },
+  { name: 'machine-td-2', source: 'client:machines/td-2.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 675], grade: false },
+  { name: 'machine-td-3', source: 'client:machines/td-3.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 1000], grade: false },
+  { name: 'machine-fl16-1', source: 'client:machines/fl16-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 600], grade: false },
+  { name: 'machine-fl100-1', source: 'client:machines/fl100-1.jpg', widths: [480, 648], grade: false },
+  { name: 'machine-rx240g-1', source: 'client:machines/rx240g-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 1000], grade: false },
+  { name: 'machine-rx240sf-1', source: 'client:machines/rx240sf-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 800], grade: false },
+  { name: 'machine-c21-1', source: 'client:machines/c21-1.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 1024, 1280], grade: false },
+  { name: 'machine-c21-2', source: 'client:machines/c21-2.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 691], grade: false },
+  { name: 'machine-c21-3', source: 'client:machines/c21-3.jpg', ratio: [4, 3], focus: [0.5, 0.5], widths: [480, 720, 1024], grade: false },
+  { name: 'machine-rieter-1', source: 'client:machines/rieter-1.png', ratio: [4, 3], focus: [0.5, 0.52], widths: [480], grade: false },
 
   // ── Leadership (real client asset) ───────────────────────────────────────
   { name: 'ceo-portrait', source: 'client:ceo-muhammad-asif-bhati.jpg', ratio: [4, 5], focus: [0.56, 0.36], widths: [480, 800, 1100], grade: false },

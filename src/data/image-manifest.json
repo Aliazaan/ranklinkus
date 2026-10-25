@@ -340,16 +340,6 @@
     ],
     "color": "#080808"
   },
-  "hero-slide-vehicle-portrait": {
-    "width": 1100,
-    "height": 1375,
-    "widths": [
-      480,
-      800,
-      1100
-    ],
-    "color": "#080808"
-  },
   "hero-slide-looms": {
     "width": 2400,
     "height": 1350,
@@ -510,5 +500,149 @@
       1400
     ],
     "color": "#080808"
+  },
+  "machine-dk803-1": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      480,
+      720,
+      1024
+    ],
+    "color": "#889868"
+  },
+  "machine-dk803-2": {
+    "width": 960,
+    "height": 720,
+    "widths": [
+      480,
+      720,
+      960
+    ],
+    "color": "#383838"
+  },
+  "machine-tc03-1": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      480,
+      720,
+      1024
+    ],
+    "color": "#585848"
+  },
+  "machine-dk903-1": {
+    "width": 800,
+    "height": 600,
+    "widths": [
+      480,
+      720,
+      800
+    ],
+    "color": "#888878"
+  },
+  "machine-td-1": {
+    "width": 750,
+    "height": 563,
+    "widths": [
+      480,
+      720,
+      750
+    ],
+    "color": "#686868"
+  },
+  "machine-td-2": {
+    "width": 480,
+    "height": 360,
+    "widths": [
+      480
+    ],
+    "color": "#181808"
+  },
+  "machine-td-3": {
+    "width": 1000,
+    "height": 750,
+    "widths": [
+      480,
+      720,
+      1000
+    ],
+    "color": "#a8a8a8"
+  },
+  "machine-fl16-1": {
+    "width": 600,
+    "height": 450,
+    "widths": [
+      480,
+      600
+    ],
+    "color": "#2868b8"
+  },
+  "machine-fl100-1": {
+    "width": 648,
+    "height": 333,
+    "widths": [
+      480,
+      648
+    ],
+    "color": "#284878"
+  },
+  "machine-rx240g-1": {
+    "width": 1000,
+    "height": 750,
+    "widths": [
+      480,
+      720,
+      1000
+    ],
+    "color": "#787868"
+  },
+  "machine-rx240sf-1": {
+    "width": 800,
+    "height": 600,
+    "widths": [
+      480,
+      720,
+      800
+    ],
+    "color": "#181818"
+  },
+  "machine-c21-1": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      480,
+      720,
+      1024,
+      1280
+    ],
+    "color": "#b8b8a8"
+  },
+  "machine-c21-2": {
+    "width": 691,
+    "height": 518,
+    "widths": [
+      480,
+      691
+    ],
+    "color": "#080808"
+  },
+  "machine-c21-3": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      480,
+      720,
+      1024
+    ],
+    "color": "#687868"
+  },
+  "machine-rieter-1": {
+    "width": 480,
+    "height": 360,
+    "widths": [
+      480
+    ],
+    "color": "#181818"
   }
 }
