@@ -81,6 +81,26 @@
     grid-template-columns: 1.12fr 1fr;
     gap: 2rem;
   }
+
+  .businesses__grid--single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* One division: image and copy sit side by side instead of stacked. */
+  .businesses__grid--single .biz-card {
+    flex-direction: row;
+  }
+
+  .businesses__grid--single .biz-card__media {
+    flex: 1.1;
+    aspect-ratio: auto;
+    min-height: 26rem;
+  }
+
+  .businesses__grid--single .biz-card__body {
+    flex: 1;
+    justify-content: center;
+  }
 }
 
 /* ── Capabilities ──────────────────────────────────────────────────────────── */

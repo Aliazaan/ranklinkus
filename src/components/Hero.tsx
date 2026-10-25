@@ -33,7 +33,7 @@ export function Hero() {
           </span>
         </h1>
         <p className="hero__lead">
-          A diversified business group delivering specialized solutions across textile machinery, cotton, consulting and security technology.
+          A diversified business group delivering specialized solutions across textile machinery, cotton and consulting.
         </p>
         <div className="hero__actions">
           <ButtonLink to="/businesses" variant="light" arrow>

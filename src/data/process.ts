@@ -22,7 +22,7 @@ export const principles: Principle[] = [
   {
     index: '01',
     title: 'Industry Knowledge',
-    description: 'Familiarity with textile, industrial and security requirements, so conversations start from the real problem.',
+    description: 'Familiarity with textile and industrial requirements, so conversations start from the real problem.',
   },
   {
     index: '02',

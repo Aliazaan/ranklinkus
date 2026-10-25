@@ -6,11 +6,13 @@ import { Section } from './Section'
 
 interface LeadershipProps {
   id?: string
+  /** Overrides the one-line summary under the name. */
+  text?: string
   /** Optional call to action rendered under the biography. */
   action?: ReactNode
 }
 
-export function Leadership({ id = 'leadership', action }: LeadershipProps) {
+export function Leadership({ id = 'leadership', text = 'Leading Dada Sons Group across its industrial, advisory and security-focused business activities.', action }: LeadershipProps) {
   return (
     <Section tone="charcoal" id={id} labelledBy={`${id}-title`} grain className="leadership">
       <div className="leadership__grid">
@@ -31,7 +33,7 @@ export function Leadership({ id = 'leadership', action }: LeadershipProps) {
             {site.ceo.name}
           </h2>
           <p className="leadership__role">{site.ceo.title}</p>
-          <p className="leadership__text">Leading Dada Sons Group across its industrial, advisory and security-focused business activities.</p>
+          <p className="leadership__text">{text}</p>
           {action}
         </ScrollReveal>
       </div>

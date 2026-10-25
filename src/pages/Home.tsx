@@ -23,14 +23,20 @@ import { Seo } from '../seo/Seo'
 import { localBusinessSchema, organizationSchema, websiteSchema } from '../seo/schema'
 import { cssVars } from '../lib/style'
 
-const featuredArticles = [...articles].sort((a, b) => Number(b.featured ?? false) - Number(a.featured ?? false)).slice(0, 3)
+// Armour Tech's topics (security, vehicles) live on its own pages; the home page covers the Dada Sons side.
+const dadaSons = businesses.filter((business) => business.slug === 'dada-sons')
+const dadaCapabilities = capabilities.filter((capability) => capability.division === 'Dada Sons')
+const homeIndustries = industries.filter((industry) => industry.slug !== 'security' && industry.slug !== 'automotive')
+const featuredArticles = [...articles]
+  .filter((article) => article.category !== 'security' && article.category !== 'automotive')
+  .sort((a, b) => Number(b.featured ?? false) - Number(a.featured ?? false)).slice(0, 3)
 
 export default function Home() {
   return (
     <>
       <Seo
         title="Dada Sons Group | Industrial & Strategic Solutions"
-        description={site.description}
+        description="Dada Sons Group provides specialized solutions across textile machinery, cotton and consulting."
         path="/"
         jsonLd={[organizationSchema(), websiteSchema(), localBusinessSchema()]}
       />
@@ -47,10 +53,10 @@ export default function Home() {
           </ScrollReveal>
           <ScrollReveal className="intro__copy" delay={140}>
             <p>
-              Dada Sons Group operates across specialized industrial and security-focused business areas, bringing together commercial expertise, sourcing capabilities and strategic advisory.
+              Dada Sons Group operates across specialized industrial business areas, bringing together commercial expertise, sourcing capabilities and strategic advisory.
             </p>
             <p>
-              Through Dada Sons and Armour Tech, the group serves clients with specific requirements, whether that is a machinery purchase, a cotton enquiry or the protection of a vehicle.
+              Through Dada Sons, the group serves clients with specific requirements, whether that is a machinery purchase, a cotton enquiry or an advisory engagement.
             </p>
             <TextLink to="/about">Discover our story</TextLink>
           </ScrollReveal>
@@ -58,9 +64,9 @@ export default function Home() {
       </Section>
 
       <Section tone="dark" id="businesses" labelledBy="businesses-title" grain className="businesses">
-        <SectionHeading eyebrow="Our Businesses" as="h2" id="businesses-title" title={<>Specialized divisions, <em>one group.</em></>} intro="Two businesses with different disciplines, brought together under one standard of service." />
-        <div className="businesses__grid">
-          {businesses.map((business, index) => (
+        <SectionHeading eyebrow="Our Business" as="h2" id="businesses-title" title={<>Machinery, cotton <em>and consulting.</em></>} intro="Dada Sons brings sourcing, machinery and advisory expertise to clients across industry." />
+        <div className="businesses__grid businesses__grid--single">
+          {dadaSons.map((business, index) => (
             <ScrollReveal key={business.slug} delay={index * 140}>
               <BusinessCard business={business} />
             </ScrollReveal>
@@ -71,9 +77,9 @@ export default function Home() {
       <Ticker />
 
       <Section tone="white" id="capabilities" labelledBy="capabilities-title" className="capabilities">
-        <SectionHeading eyebrow="Our Capabilities" id="capabilities-title" title={<>What the group <em>does.</em></>} intro="Six capabilities across two divisions: three in industrial sourcing and advisory, three in vehicle protection and security." />
+        <SectionHeading eyebrow="Our Capabilities" id="capabilities-title" title={<>What the group <em>does.</em></>} intro="Three capabilities in industrial sourcing and advisory." />
         <div className="capabilities__grid">
-          {capabilities.map((capability, index) => (
+          {dadaCapabilities.map((capability, index) => (
             <ScrollReveal key={capability.index} delay={(index % 3) * 100}>
               <CapabilityCard capability={capability} />
             </ScrollReveal>
@@ -89,7 +95,7 @@ export default function Home() {
       <Section tone="light" id="industries" labelledBy="industries-title" className="industries">
         <SectionHeading eyebrow="Industries We Serve" id="industries-title" title={<>Where our expertise <em>applies.</em></>} />
         <ScrollReveal className="industries__panels" variant="fade">
-          {industries.map((industry) => (
+          {homeIndustries.map((industry) => (
             <IndustryCard key={industry.slug} industry={industry} />
           ))}
         </ScrollReveal>
@@ -120,11 +126,11 @@ export default function Home() {
         <ProcessSteps steps={processSteps} />
       </Section>
 
-      <Leadership id="leadership" action={<TextLink to="/about">About the group</TextLink>} />
+      <Leadership id="leadership" text="Leading Dada Sons Group across its industrial and advisory business activities." action={<TextLink to="/about">About the group</TextLink>} />
 
       <Section tone="white" id="insights" labelledBy="insights-title" className="home-insights">
         <div className="home-insights__head">
-          <SectionHeading eyebrow="Insights" id="insights-title" title={<>Perspectives on <em>industry</em> and security.</>} intro="Sample editorial topics. Full articles are in preparation and will be published after review." />
+          <SectionHeading eyebrow="Insights" id="insights-title" title={<>Perspectives on <em>industry</em> and sourcing.</>} intro="Sample editorial topics. Full articles are in preparation and will be published after review." />
           <ScrollReveal className="home-insights__all">
             <TextLink to="/insights">View all insights</TextLink>
           </ScrollReveal>
@@ -140,7 +146,7 @@ export default function Home() {
 
       <CTASection
         title={<>Have a <em>requirement?</em></>}
-        text="Speak with our team about your industrial, consulting or security requirements."
+        text="Speak with our team about your industrial or consulting requirements."
         cta={{ label: 'Start a conversation', to: '/contact' }}
         secondary={{ label: site.phone.display, href: site.phone.href }}
       />
