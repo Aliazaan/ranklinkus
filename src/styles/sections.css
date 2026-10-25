@@ -1240,7 +1240,7 @@
 
 .machine__detail {
   margin-bottom: 0.5rem;
-  color: var(--gold);
+  color: var(--accent);
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -1276,7 +1276,64 @@
   text-transform: uppercase;
 }
 
+/* Home page: compact numbered tiles of every machine */
+.home-machines__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+}
+
+.machine-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  list-style: none;
+}
+
+@media (min-width: 600px) {
+  .machine-tiles {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 1.25rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .machine-tiles {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.machine-tile__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--dark-gray);
+}
+
+.machine-tile:hover .machine__img {
+  transform: scale(1.04);
+}
+
+.machine-tile__name {
+  margin-top: 0.9rem;
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  line-height: 1.2;
+}
+
+.machine-tile__detail {
+  margin-top: 0.35rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .machine-tile:hover .machine__img,
   .machine:hover .machine__img {
     transform: none;
   }

@@ -6,7 +6,7 @@ const SLIDES = [
   { name: 'hero-slide-looms', mobile: 'hero-slide-looms-portrait' },
 ] as const
 
-const FACTS = ['Textile Machinery', 'New Machines', 'Used Machines', 'Cotton & Commodities', 'Consulting']
+const FACTS = ['Textile Machinery', 'Used Machines', 'Cotton & Commodities', 'Consulting']
 
 export function Hero() {
   return (

@@ -6,6 +6,7 @@ import { Hero } from '../components/Hero'
 import { IndustryCard } from '../components/IndustryCard'
 import { InsightCard } from '../components/InsightCard'
 import { Leadership } from '../components/Leadership'
+import { MachineTiles } from '../components/MachineTiles'
 import { ProcessSteps } from '../components/ProcessSteps'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { Ticker } from '../components/Ticker'
@@ -16,6 +17,7 @@ import { site } from '../config/site'
 import { businesses } from '../data/businesses'
 import { capabilities } from '../data/capabilities'
 import { machineryGallery } from '../data/gallery'
+import { machines } from '../data/machines'
 import { industries } from '../data/industries'
 import { articles } from '../data/insights'
 import { principles, processSteps } from '../data/process'
@@ -85,6 +87,16 @@ export default function Home() {
             </ScrollReveal>
           ))}
         </div>
+      </Section>
+
+      <Section tone="light" id="machines" labelledBy="machines-title" className="machines">
+        <div className="home-machines__head">
+          <SectionHeading eyebrow="Textile Machinery" id="machines-title" title={<>Used <em>machines.</em></>} intro="Used textile machinery, listed in sequence. Condition and availability are confirmed on enquiry." />
+          <ScrollReveal className="home-machines__all">
+            <TextLink to="/machines">View all used machines</TextLink>
+          </ScrollReveal>
+        </div>
+        <MachineTiles machines={machines} />
       </Section>
 
       <Section tone="charcoal" id="gallery" labelledBy="gallery-title" grain className="home-gallery">

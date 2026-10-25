@@ -60,9 +60,9 @@ Armour Tech's AAT logo can be added to `src/pages/ArmourTech.tsx` once supplied.
 4. Update the `alt` text where the image is used.
 
 ### Machines page
-`/machines` has a **New machines** and a **Used machines** section. Machines live in `src/data/machines.ts`, in
-sequence; each has a `condition` (`'new'` or `'used'`) that decides its section, so changing one word moves it. Photos
-sit in `assets-src/machines/` and are registered in `scripts/images.config.mjs` (`machine-*`, no colour grade).
+`/machines` lists the used machines (there are no new machines). The list lives in `src/data/machines.ts`, in sequence,
+and the same list feeds the "Used machines" section on the home page. Photos sit in `assets-src/machines/` and are
+registered in `scripts/images.config.mjs` (`machine-*`, no colour grade).
 
 See `IMAGE-CREDITS.md` for the current placeholder sources.
 

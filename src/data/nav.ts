@@ -30,20 +30,15 @@ export const footerNav = {
   ] satisfies NavItem[],
   businesses: [
     { label: 'Dada Sons', to: '/businesses/dada-sons' },
-    { label: 'New & used machines', to: '/machines' },
-    { label: 'Armour Tech', to: '/businesses/armour-tech' },
+    { label: 'Used machines', to: '/machines' },
   ] satisfies NavItem[],
   solutions: [
     solutionLink('textile-machinery', 'Textile Machinery'),
     solutionLink('cotton-sourcing', 'Cotton'),
     solutionLink('industrial-consulting', 'Consulting'),
-    solutionLink('armoured-vehicles', 'Armoured Vehicles'),
-    solutionLink('security-retrofitting', 'Security Retrofitting'),
   ],
   insights: [
     { label: 'Textile', to: '/insights?category=textile' },
     { label: 'Industrial', to: '/insights?category=industrial' },
-    { label: 'Security', to: '/insights?category=security' },
-    { label: 'Automotive', to: '/insights?category=automotive' },
   ] satisfies NavItem[],
 }
